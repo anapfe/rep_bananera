@@ -4,6 +4,8 @@ return [
   'estudio' => 'studio',
   'contacto' => 'contact',
   'tienda' => 'shop',
+  'cliente' => 'client',
+  'año' => 'year'
 ];
 
  ?>

@@ -85,7 +85,7 @@ class ProjectsController extends Controller
   }
 
   // descripcion de proyecto para index
-  public function project_description($id) {
+  public function projectDescription($id) {
     $project = Project::find($id);
     if ($project == null) {
       return redirect('/error');

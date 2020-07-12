@@ -1,14 +1,4 @@
-@extends('layouts.head')
-
 @extends('layouts.layout')
-
-@section('stylesheet')
-  <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-@endsection
-
-@section('title')
-  <title>REPÚBLICA BANANERA</title>
-@endsection
 
 @section('content')
   <div class="main">
@@ -56,7 +46,7 @@
       <div class="project-masonry">
         @foreach ($projects as $project)
           <div class="project-card">
-            <a class="project-link" href="{{ '/proyectos/' . $project->id }}">
+            <a class="project-link" href="{{ '/proyecto/' . $project->id }}">
               <img class="project-img" src="{{ asset( '/storage/' . $project->primary_img )}}" alt="foto de proyecto">
               <div class="project-caption">
                 <div>

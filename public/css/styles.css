@@ -80,7 +80,7 @@ h2 {
 h4 {
   font-size: 18px;
   line-height: 25px;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 .logo-mobile {
   display: block;
@@ -233,6 +233,7 @@ h4 {
 .project-data {
   width: 100%;
   display: inline-flex;
+  margin: 40px 0;
 }
 .top-left-side {
   margin-bottom: 20px;
@@ -332,7 +333,7 @@ h4 {
   #backtop {
     position: fixed;
     left:auto;
-    right: 40px;
+    right: 83px;
     top:auto;
     bottom: 40px;
     outline: none;

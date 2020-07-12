@@ -1,3 +1,9 @@
+@extends('layouts.head')
+
+@section('title')
+  <title>REPÚBLICA BANANERA</title>
+@endsection
+
 @section('stylesheet')
   <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 @endsection
@@ -5,10 +11,6 @@
 @section('scripts_header')
   <!-- Scripts -->
   <script src="{{ asset('js/float-panel.js') }}"></script>
-@endsection
-
-@section('title')
-  <title>REPÚBLICA BANANERA</title>
 @endsection
 
 <body>

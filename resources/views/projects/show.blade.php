@@ -26,12 +26,18 @@
         </h5>
       </div>
       <div class="project-description">
-        {{ $project->description }}
+        @if (App::isLocale('en'))
+          {{ $project->en_description }}
+        @elseif (App::isLocale('cat'))
+          {{ $project->cat_description }}
+        @else
+          {{ $project->es_description }}
+        @endif
       </div>
     </div>
     <div class="right-side">
-      <h2><span class="bold">Año: </span>{{ $project->year }}</h2>
-      <h2><span class="bold">Cliente: </span>{{ $project->client }}</h2>
+      <h4><span class="bold">{{ trans('file.año') }}: </span>{{ $project->year }}</h4>
+      <h4><span class="bold">{{ trans('file.cliente') }}: </span>{{ $project->client }}</h4>
     </div>
   </div>
 </div>
