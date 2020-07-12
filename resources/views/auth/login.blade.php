@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.frontLayout')
 
 @section('content')
   <div class="main">
@@ -29,14 +29,14 @@
               </span>
           @endif
         </div>
-        <div class="input">
+        <div class="input rememberme">
           <label class="form-label">
-              <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
+              <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> recordarme
           </label>
         </div>
-        <div class="input">
+        <div class="input login-foot">
           <button class="btn" type="submit" name="button">ingresar</button>
-          <a class="input" href="{{ route('password.request') }}">
+          <a class="input reset" href="{{ route('password.request') }}">
               ¿Olvidaste tu contraseña?
           </a>
         </div>

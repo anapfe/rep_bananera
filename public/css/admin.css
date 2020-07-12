@@ -103,19 +103,6 @@ a:hover {
   line-height: 2em;
   display: block;
 }
-
-.caja {
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 30px;
-  position: absolute;
-}
-.caja.btn {
-  background-color: coral;
-  color: white;
-  padding: 5px 20px;
-}
 .left-nav {
   width: 160px;
 }
@@ -223,16 +210,15 @@ a:hover {
 .index-img {
   width: 100%;
   margin-bottom: 20px;
-
 }
-.div-top, .div-bottom {
+/* .div-top, .div-bottom {
   width: 100%;
   display: block;
 }
 .div-bottom {
   display: flex;
   justify-content: space-between;
-}
+} */
 #title, #name {
   width: 100%;
 }

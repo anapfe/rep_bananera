@@ -65,7 +65,7 @@ header {
   justify-content: space-between;
 }
 a {
-  color: #999966;
+  color: grey;
 }
 a:hover {
   color: rgb(82, 82, 82);
@@ -171,6 +171,7 @@ h4 {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  line-height: 0;
 }
 /* FIN DE NO SE TOCA */
 
@@ -190,7 +191,7 @@ h4 {
   left: 0;
   cursor: pointer;
 }
-.project-caption > div {
+.project-caption div {
   display: table;
   width: 100%;
   height: 100%;
@@ -328,8 +329,63 @@ h4 {
     column-count: 3;
   }
 
-  /* back to top */
+  /*login_form */
+  .caja {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: grey;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: 'Playfair Display', serif;
+  }
+  .form-label {
+    color: grey;
+    display: block;
+  }
+  .input {
+    padding-bottom: 10PX;
+  }
+  .input-login {
+    width: 100%;
+    border: 1px solid grey;
+    height: 25px;
+  }
+  .rememberme {
+    color: coral;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+  .login-foot {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    padding: 5px 15px;
+    background-color: coral;
+    color: white;
+    text-transform: uppercase;
+  }
+  .btn:hover {
+    background-color: grey;
+  }
+  .reset {
+    font-size: 15px;
+    color: coral;
+    padding: 0;
+    align-self: flex-end;
+    line-height: 12px;
+  }
 
+  /* back to top */
   #backtop {
     position: fixed;
     left:auto;
