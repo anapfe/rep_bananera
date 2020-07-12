@@ -386,33 +386,36 @@ h4 {
   }
 
   /* back to top */
-  #backtop {
-    position: fixed;
-    left:auto;
-    right: 83px;
-    top:auto;
-    bottom: 40px;
-    outline: none;
-    overflow:hidden;
-    color:#fff;
-    text-align:center;
-    background-color: coral;
-    height:60px;
-    width:60px;
-    line-height:60px;
-    font-size:14px;
-    border-radius:2px;
-    cursor:pointer;
-    transition:all 0.3s linear;
-    z-index:999999;
 
-    opacity:1;
-    display:none;
+  @media (min-width: 400px) {
+    #backtop {
+      position: fixed;
+      left: auto;
+      right: 83px;
+      top:auto;
+      bottom: 40px;
+      outline: none;
+      overflow:hidden;
+      color:#fff;
+      text-align:center;
+      background-color: coral;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      font-size: 14px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      z-index: 999999;
+      opacity: 1;
+      display: none;
+    }
+    #backtop:hover {
+      background-color: black;
+    }
+    #backtop.mcOut {
+      opacity:0;
+    }
   }
-  #backtop:hover {
-    background-color: black;
-  }
-  #backtop.mcOut {
-    opacity:0;
-  }
+
 }

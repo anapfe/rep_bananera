@@ -77,7 +77,7 @@ Salir
 @yield('scripts')
 
 <!-- Scripts -->
-<script src="{{ asset('js/front.js') }}"></script>
+<script src="{{ asset('js/frontdesk.js') }}"></script>
 
 </body>
 </html>

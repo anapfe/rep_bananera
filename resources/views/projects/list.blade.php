@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.backLayout')
 
 @section('content')
 
@@ -7,7 +7,7 @@
       <span>Proyectos</span>
       <div class="controls">
         <div class="control">
-          <a href="/admin/proyecto_nuevo">+</a>          
+          <a href="/admin/proyecto_nuevo">+</a>
         </div>
         <form class="search" action="/admin/buscarProyectos" method="get">
           <input class="search-box" type="text" name="search" value="" placeholder="buscar">
