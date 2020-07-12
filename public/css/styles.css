@@ -386,7 +386,9 @@ h4 {
   }
 
   /* back to top */
-
+  #backtop {
+    display: none;
+  }
   @media (min-width: 400px) {
     #backtop {
       position: fixed;
