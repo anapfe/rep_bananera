@@ -1,0 +1,393 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd, ol, ul, li, input,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* css propio */
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 400;
+  background-color: rgb(240, 207, 181);
+  background-image: url(../images/background.png);
+  background-repeat: repeat;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.site {
+  padding-top: 13px;
+  padding-left: 45px;
+  color: white;
+  font-weight: 500;
+}
+.site a {
+  color: white;
+}
+.site a:hover {
+  color: coral;
+}
+a {
+  color: coral;
+}
+
+a:hover {
+  font-weight: 700;
+}
+.logo-mobile {
+  display: block;
+}
+.logo-desktop {
+  display: none;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 40px;
+  margin-top: 60px;
+  background-color: white;
+}
+.errors {
+  color: red;
+  font-weight: 500;
+  font-size: 0.9em;
+  line-height: 2em;
+  display: block;
+}
+
+.caja {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  position: absolute;
+}
+.caja.btn {
+  background-color: coral;
+  color: white;
+  padding: 5px 20px;
+}
+.left-nav {
+  width: 160px;
+}
+.user-data {
+  width: 100%;
+  text-align: left;
+}
+.admin-foto {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border: 2px solid coral;
+}
+.username {
+  font-weight: 700;
+  display: block;
+  color: coral;
+}
+.menu {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 0.9em;
+}
+.menu-item {
+  color: grey;
+  border-bottom: 1px solid grey;
+  display: block;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-item a:hover {
+  font-weight: 700;
+}
+.menu-subitem {
+  border-bottom: 2px solid coral;
+  padding: 12px 10px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.menu-subitem a {
+  color: coral;
+}
+.menu-subitem a:hover {
+  font-weight: 700;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.main {
+  margin-left: 40px;
+  width: 100%; //no tocar
+}
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: grey;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: 'Playfair Display', serif;
+}
+.main-wrapper {
+  margin-left: 40px;
+  max-width: 400px;
+}
+.form-div {
+  width: 60%;
+}
+.main-body {
+  width: 100%;
+}
+.form-project {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input {
+  margin-bottom: 20px;
+  width: 500px;
+}
+.input-div {
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.div-right, .div-left {
+  width: 50%;
+}
+.div-left {
+  padding-right: 60px;
+}
+.index-img {
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+.div-top, .div-bottom {
+  width: 100%;
+  display: block;
+}
+.div-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#title, #name {
+  width: 100%;
+}
+#year {
+  width: 30%;
+}
+#client {
+  width: 60%;
+}
+.div-tags {
+  margin-bottom: 20px;
+  margin-right: 50px;
+  width: 100%;
+  display: block;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+.tag-text {
+  color: coral;
+  margin-right: 15px;
+}
+.input-project {
+  width: 100%;
+  border: 1px solid grey;
+  height: 25px;
+  display: block;
+  font-size: 0.8em;
+  padding-left: 8px;
+}
+.input-textarea {
+  height: 87px;
+  width: 400px;
+  border: 1px solid grey;
+  font-family: roboto;
+  padding: 5px;
+}
+.form-label {
+  color: grey;
+  padding-bottom: 12px;
+  display: block;
+}
+.input-login {
+  width: 100%;
+  border: 1px solid grey;
+  height: 25px;
+}
+.btn {
+  padding: 5 20px;
+  background-color: #FF9966;
+  color: white;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: grey;
+}
+.controls {
+  display: flex;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: coral;
+  font-family: roboto;
+}
+.control {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Roboto;
+  margin: 0 20px;
+  line-height: 25px;
+}
+.control-select {
+  text-align: left;
+  border: 1px solid coral;
+  height: 25px;
+  font-size: 0.8em;
+  width: 150px;
+  text-transform: lowercase;
+  font-family: roboto;
+  color: grey;
+}
+.search {
+  display: flex;
+}
+.search-box {
+  border: 1px solid coral;
+  min-width: 100px;
+  max-width: 200px;
+  height: 25px;
+  margin-right: 10px;
+  font-size: 0.8em;
+  padding: 0 5px;
+  display: flex;
+}
+.search-button {
+  background-color: transparent;
+  position: relative;
+  right: 30px;
+}
+.results {
+  font-size: 0.9em;
+  background-color: rgb(253, 255, 173);
+  padding: 8px;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+table th {
+  color: grey;
+  font-size: 0.9em;
+  padding: 10px;
+  border-bottom: 1px solid coral;
+}
+table td {
+  padding: 10px 0 ;
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  vertical-align: top;
+}
+.project-15 {
+  width: 15%;
+}
+.project-10 {
+  width: 10%;
+  padding: 0;
+}
+.project-description {
+  width: 25%;
+}
+.project-ctrl {
+  width: 6%;
+}
+.project-img {
+  width: 100px;
+}
+.fa {
+  color: black;
+}
+.fa:hover {
+  color: #FF9966;
+}
+
+@media (min-width: 470px) {
+  .header {
+    height: 150px;
+    max-width: 1180px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desktop {
+    display: block;
+    max-width: 200px;
+  }
+}
