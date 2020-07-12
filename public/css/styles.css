@@ -84,6 +84,7 @@ h4 {
 }
 .logo-mobile {
   display: block;
+  max-width: 200px;
 }
 .logo-desktop {
   display: none;

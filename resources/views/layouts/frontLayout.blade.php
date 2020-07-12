@@ -21,6 +21,7 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/float-panel.js') }}"></script>
+  <script src="{{ asset('js/frontdesk.js') }}"></script>
 
 </head>
 
@@ -75,9 +76,6 @@ Salir
 @yield('content')
 
 @yield('scripts')
-
-<!-- Scripts -->
-<script src="{{ asset('js/frontdesk.js') }}"></script>
 
 </body>
 </html>

@@ -3,7 +3,15 @@ window.addEventListener('load', function() {
   var btn = document.querySelector('.menu-hamburger');
   btn.onclick = function() {
     document.querySelector(".menu-items").classList.toggle("show-menu");
-  }
+    var hamburg = document.querySelector('.menu-hamburger');
+
+    if ( hamburg.innerHTML.includes('<i class="fa fa-times" aria-hidden="true"></i>')) {
+      hamburg.innerHTML = '<i class="fa fa-bars" aria-hidden="true"></i>';
+    } else {
+      hamburg.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
+    };
+
+  };
 
   var projectCaption = document.querySelectorAll('.project-caption');
   projectCaption.forEach(function(element)
