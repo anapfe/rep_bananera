@@ -10,9 +10,28 @@ window.addEventListener('load', function() {
     } else {
       hamburg.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
     };
-
   };
 
+  //scroll to top
+  //Get the button
+  var backTop = document.querySelector("#backTop");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backTop.style.display = "block";
+    } else {
+      backTop.style.display = "none";
+    }
+  };
+  /// When the user clicks on the button, scroll to the top of the document
+  backTop.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  // scroll to top -end
+
+  //project caption
   var projectCaption = document.querySelectorAll('.project-caption');
   projectCaption.forEach(function(element)
   {
@@ -29,6 +48,7 @@ window.addEventListener('load', function() {
       element.classList.remove('show-caption');
     });
   });
+  //project caption -end
 
   // current page menu
   try {
@@ -43,6 +63,7 @@ window.addEventListener('load', function() {
     });
   } catch(error) {
   };
+  // current page menu -end
 
 
 

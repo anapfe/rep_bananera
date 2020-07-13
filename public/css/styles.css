@@ -45,6 +45,9 @@ table {
 
 /* CSS PROPIO */
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100%;
   margin: 0 auto;
@@ -95,7 +98,7 @@ h4 {
 }
 .wrapper {
   max-width: 100%;
-  padding: 20px;
+  padding: 20px 0;
 }
 .menu {
   display: flex;
@@ -136,7 +139,7 @@ h4 {
 }
 .tag-filter ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -146,6 +149,8 @@ h4 {
 .tag-filter li a {
   color: #000000;
   font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
 }
 .tag-filter li a:hover {
   color: rgb(82, 82, 82);
@@ -266,6 +271,8 @@ h4 {
     max-width: 1180px;
     margin: 0 auto;
     align-items: center;
+    /* display: flex;
+    align-items: baseline; */
   }
   .logo-mobile {
     display: none;
@@ -386,39 +393,28 @@ h4 {
     line-height: 12px;
   }
 
-  /* back to top */
-  #backtop {
-    display: none;
-  }
-  @media (min-width: 400px) {
-    #backtop {
-      position: fixed;
-      left: auto;
-      right: 83px;
-      top:auto;
-      bottom: 40px;
-      outline: none;
-      overflow:hidden;
-      color:#fff;
-      text-align:center;
-      background-color: coral;
-      height: 60px;
-      width: 60px;
-      line-height: 60px;
-      font-size: 14px;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: all 0.3s linear;
-      z-index: 999999;
-      opacity: 1;
+  @media (min-width: 470px) {
+    #backTop {
       display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: coral;
+      color: white;
+      cursor: pointer;
+      height: 55px;
+      width: 55px;
     }
-    #backtop:hover {
-      background-color: black;
-    }
-    #backtop.mcOut {
-      opacity:0;
+
+    #backTop:hover {
+      background-color: #555;
     }
   }
+
+
 
 }

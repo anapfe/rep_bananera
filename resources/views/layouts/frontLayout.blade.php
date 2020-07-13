@@ -20,14 +20,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Scripts -->
-  <script src="{{ asset('js/float-panel.js') }}"></script>
   <script src="{{ asset('js/frontdesk.js') }}"></script>
 
 </head>
 
 <body>
   <header>
-    <div id="backtop">&#9650;</div>
+    <!-- backtop -->
+    <button id="backTop" title="toTop">&#9650;</button>
+    <!-- back top end -->
     <a class="logo" href="/">
       <img class="logo-mobile" src="{{asset('images/logo-responsive.png')}}" alt="">
       <img class="logo-desktop" src="{{asset('images/logo.png')}}" alt="">
