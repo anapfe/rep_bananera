@@ -58,7 +58,7 @@ body {
   font-size: 17px;
   line-height: 27px;
   font-weight: 400;
-  background-color: rgb(240, 207, 181);
+  background-color: rgb(255, 246, 238);
   background-image: url('../images/background.png');
   background-repeat: repeat;
 }
@@ -121,7 +121,6 @@ h4 {
   padding-top: 20px;
 }
 .menu-items a {
-  font-family: 'Playfair Display', serif;
   color: black;
   font-weight: 500;
   font-size: 1.5em;
@@ -146,7 +145,7 @@ h4 {
   content: "|";
 }
 /* .tag-not-selected {
-  color: coral;
+color: coral;
 } */
 
 .tag-filter ul {
@@ -275,34 +274,32 @@ h4 {
 
 #backTop {
   display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  height: 55px;
+  width: 55px;
+}
+
+#backTop:hover {
+  background-color: #555;
 }
 @media (min-width: 470px) {
-  #backTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: coral;
-    color: white;
-    cursor: pointer;
-    height: 55px;
-    width: 55px;
-  }
 
-  #backTop:hover {
-    background-color: #555;
-  }
 }
 
 @media (min-width: 470px) {
   header {
     max-width: 1180px;
-    margin: 50px auto;
-    align-items: center;
+    margin: 50px auto 70px auto;
+    align-items: top;
     /* display: flex;
     align-items: baseline; */
   }
@@ -325,10 +322,10 @@ h4 {
     padding-bottom: 0;
   }
   .tag-filter {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    padding-top: 0;
+    margin: 0 auto 50px 0;
     display: flex;
+    padding: 0;
+    border-bottom: solid 1px black;
   }
 }
 
