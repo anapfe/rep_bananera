@@ -1,5 +1,6 @@
 window.addEventListener('load', function() {
 
+  //hamburguesa
   var btn = document.querySelector('.menu-hamburger');
   btn.onclick = function() {
     document.querySelector(".menu-items").classList.toggle("show-menu");
@@ -11,6 +12,7 @@ window.addEventListener('load', function() {
       hamburg.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
     };
   };
+  //hamburguesa -end
 
   //scroll to top
   //Get the button
@@ -57,7 +59,8 @@ window.addEventListener('load', function() {
     menuItem.forEach(function(element) {
       var child = element.children[0];
       var menuUrl = child.href;
-      if (currentUrl === menuUrl) {
+      var menuWord = child.innerHTML;
+      if (currentUrl === menuUrl || currentUrl.includes(menuWord) && !currentUrl.includes('es')) {
         child.classList.add('current-url');
       };
     });
@@ -65,7 +68,26 @@ window.addEventListener('load', function() {
   };
   // current page menu -end
 
-
-
+  //current page tag
+  try {
+    var currentUrl = window.location.href;
+    var homeUrl = window.location.hostname;
+    var tags = document.querySelectorAll('.tag');
+    if (currentUrl !== 'http://' + homeUrl + ':8000/' ) {
+      tags.forEach(function(element) {
+        var tag = element.children[0];
+        var tagUrl = tag.href;
+        if (currentUrl === tagUrl) {
+          tag.classList.add('tag-selected');
+        } else {
+          // tag.classList.add('tag-not-selected');
+        };
+      });
+    } else {
+    };
+  } catch (error) {
+    // do nosing
+  };
+  //current page tag -end
 
 });

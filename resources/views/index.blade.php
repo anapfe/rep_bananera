@@ -4,7 +4,7 @@
   <div class="main">
     <div class="tag-filter wrapper">
       <ul>
-        <li>
+        <li class="tag">
           <a href="/">
             @if (App::isLocale('en'))
               all
@@ -17,7 +17,7 @@
         </li>
         @if (App::isLocale('en'))
           @foreach ($tags as $tag)
-            <li>
+            <li class="tag">
               <a href="/proyectos/{{ $tag->es_name }}">
                 {{ $tag->en_name}}
               </a>
@@ -25,7 +25,7 @@
           @endforeach
         @elseif (App::isLocale('cat'))
           @foreach ($tags as $tag)
-            <li>
+            <li class="tag">
               <a href="/proyectos/{{ $tag->es_name }}">
                 {{ $tag->cat_name}}
               </a>
@@ -33,7 +33,7 @@
           @endforeach
         @else
           @foreach ($tags as $tag)
-            <li>
+            <li class="tag">
               <a href="/proyectos/{{ $tag->es_name }}">
                 {{ $tag->es_name}}
               </a>
