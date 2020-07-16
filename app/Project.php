@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['title', 'es_description', 'en_description', 'cat_description', 'year', 'client', 'primary_img'];
+    protected $fillable = ['title', 'es_description', 'en_description', 'cat_description', 'year', 'client', 'primary_img', 'slug'];
 
     public function tags() {
       return $this->belongsToMany('\App\Tag', 'project_tag', 'project_id', 'tag_id');

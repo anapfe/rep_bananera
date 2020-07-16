@@ -167,6 +167,7 @@ class ProjectsController extends Controller
       "cat_description" => $request->input('cat_description'),
       "year" => $request->input("year"),
       "client" => $request->input("client"),
+      'slug' => slug($request->input('title') . ' ' . $request->input('client')),
       "primary_img" => $path
     ]);
 

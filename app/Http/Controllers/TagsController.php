@@ -47,7 +47,7 @@ class TagsController extends Controller
     ];
     $request->validate($rules, $messages);
     $tag = Tag::create([
-      "es_name" => $request->input('name')
+      "es_name" => $request->input('es_name')
     ]);
     return redirect('/etiquetas');
   }
@@ -78,7 +78,7 @@ class TagsController extends Controller
   public function updateTag(Request $request, $id)
   {
     $tag = Tag::find($id);
-    $tag->title = $request->input('name');
+    $tag->title = $request->input('es_name');
     $tag->save();
   }
 

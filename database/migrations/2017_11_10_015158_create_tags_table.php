@@ -18,6 +18,7 @@ class CreateTagsTable extends Migration
           $table->string('es_name');
           $table->string('en_name');
           $table->string('cat_name');
+          $table->string('slug')->unique();
           $table->timestamps();
       });
     }

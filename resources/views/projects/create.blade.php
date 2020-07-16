@@ -8,7 +8,6 @@
     <div class="main-body">
       <form class="form-project" action="/admin/proyecto_nuevo" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
-
         <div class="input-div {{ $errors->has('title') ? ' has-error' : '' }}" id="title">
           <label class="form-label" for="title">Titulo</label>
           <input class="input-project" type="text" name="title" value="{{ old('title') }}" autofocus>

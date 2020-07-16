@@ -2,8 +2,10 @@
 
 @section('content')
   <div class="main">
+    <div class="wrapper">
+      <img class="studio-img" src=" {{ asset('images/studio.jpg') }}" alt="studio">
+    </div>
     <div class="studio">
-
       @if (App::isLocale('en'))
         <p>
           My name is Ana Pfefferkorn, I was born in Vicente Lopez on March 21, 1988. I am a graphic designer graduated from the UBA since 2015 and fullstack web developer of Digital House since 2017. For many years I have been working in the family business, Repuestos Miter, that allowed me to grow, train and today allows me to make this study possible.
