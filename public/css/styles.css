@@ -155,8 +155,13 @@ color: coral;
   margin: 0 auto;
   flex-wrap: wrap;
 }
+@media (min-width: 470px) {
+  .tag-filter ul {
+    justify-content: space-between;
+  }
+}
 .tag-filter li {
-  margin: 0 30px;
+  margin: 0 10px;
 }
 .tag-filter li a {
   font-size: 18px;
