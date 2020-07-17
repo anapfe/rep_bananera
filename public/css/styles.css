@@ -199,6 +199,9 @@ color: coral;
   display: table-cell;
   position: relative;
 }
+.project-link:hover {
+  filter: grayscale(100%);
+}
 .project-caption {
   opacity: 0;
   transition: all 150ms linear;
