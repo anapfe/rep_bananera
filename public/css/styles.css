@@ -286,7 +286,14 @@ color: coral;
 .bold {
   font-weight: 700;
 }
+footer {
 
+}
+.footer {
+  padding: 60px 0 40px 0;
+  text-align: center;
+  border-top: solid 1px black;
+}
 #backTop {
   visibility: hidden;
   /* display: none; */
@@ -305,12 +312,8 @@ color: coral;
   opacity: 0;
   transition: opacity 0.5s linear;
 }
-
 #backTop:hover {
   background-color: #555;
-}
-@media (min-width: 470px) {
-
 }
 
 @media (min-width: 470px) {

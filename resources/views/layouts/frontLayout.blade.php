@@ -79,4 +79,9 @@ Salir
 @yield('scripts')
 
 </body>
+<footer class="main">
+  <p class="footer">
+    © 2020. Ana Pfefferkorn. All Rights Reserved.
+  </p>
+</footer>
 </html>
