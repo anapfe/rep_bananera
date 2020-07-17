@@ -58,8 +58,9 @@ body {
   font-size: 17px;
   line-height: 27px;
   font-weight: 400;
-  background-color: rgb(255, 246, 238);
-  background-image: url('../images/background.png');
+  /* background-color: rgb(255, 246, 238); */
+  background-color: #faf5ef;
+  /* background-image: url('../images/background.png'); */
   background-repeat: repeat;
 }
 header {
@@ -246,6 +247,7 @@ color: coral;
 /* estudio */
 .studio-img {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 /* proyecto */
@@ -278,7 +280,8 @@ color: coral;
 }
 
 #backTop {
-  display: none;
+  visibility: hidden;
+  /* display: none; */
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -286,11 +289,13 @@ color: coral;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: rgba(0, 0, 0, 0.79);
+  background-color: rgba(60, 60, 60, 0.90);
   color: white;
   cursor: pointer;
   height: 55px;
   width: 55px;
+  opacity: 0;
+  transition: opacity 0.5s linear;
 }
 
 #backTop:hover {

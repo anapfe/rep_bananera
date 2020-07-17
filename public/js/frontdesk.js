@@ -15,17 +15,19 @@ window.addEventListener('load', function() {
   //hamburguesa -end
 
   //scroll to top
-  //Get the button
-  var backTop = document.querySelector("#backTop");
-
-  // When the user scrolls down 20px from the top of the document, show the button
+  var backTop = document.querySelector('#backTop');
+  var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      backTop.style.display = "block";
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      backTop.style.opacity = "0";
+      backTop.style.visibility = "hidden";
     } else {
-      backTop.style.display = "none";
+      backTop.style.opacity = "1";
+      backTop.style.visibility = "visible";
     }
-  };
+    prevScrollpos = currentScrollPos;
+  }
   /// When the user clicks on the button, scroll to the top of the document
   backTop.onclick = function() {
     document.body.scrollTop = 0;
@@ -73,7 +75,9 @@ window.addEventListener('load', function() {
     var currentUrl = window.location.href;
     var homeUrl = window.location.hostname;
     var tags = document.querySelectorAll('.tag');
-    if (currentUrl !== 'http://' + homeUrl + ':8000/' ) {
+    if (currentUrl == 'http://' + homeUrl + ':8000/' || currentUrl == 'http://' + homeUrl + '/' ) {
+      // do nosing
+    } else {
       tags.forEach(function(element) {
         var tag = element.children[0];
         var tagUrl = tag.href;
@@ -83,10 +87,9 @@ window.addEventListener('load', function() {
           // tag.classList.add('tag-not-selected');
         };
       });
-    } else {
     };
   } catch (error) {
-    // do nosing
+
   };
   //current page tag -end
 
