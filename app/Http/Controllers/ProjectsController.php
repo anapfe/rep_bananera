@@ -22,11 +22,12 @@ class ProjectsController extends Controller
 
   // lista proyectos
   public function listProjects() {
-    $projects = Project::orderBy('created_at', 'desc')->get();
-    $param = [
-      'projects' => $projects,
-    ];
-    return view('projects.list', $param);
+    // $projects = Project::orderBy('created_at', 'desc')->get();
+    // $param = [
+    //   'projects' => $projects,
+    // ];
+    // return view('projects.list', $param);
+    return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->get()]);
   }
 
   // proyectos por año
@@ -62,11 +63,32 @@ class ProjectsController extends Controller
   // proyectos por tag
   public function listProjectsByTag($tag_name)
   {
-    $tag = Tag::where("es_name", "=", $tag_name)->first();
-    $tags = Tag::orderBy('es_name', 'asc')->get();
-    $projects = $tag->projects;
+  //   $tag = Tag::where("es_name", "=", $tag_name)->first();
+  //   $tags = Tag::orderBy('es_name', 'asc')->get();
+  //   $projects = $tag->projects;
+  //
+  //   // $param = [
+  //   //   'tags' => $tags,
+  //   //   'projects' => $projects,
+  //   // ];
+  //
+  // //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
+  //   if ($request->ajax()) {
+  //     //va a los datos
+  //     return view('index', compact('posts'));
+  //   } else {
+  //     // va a la página normal
+  //     return view('ajax', compact('tag', 'tags', 'projects'));
+  //   }
 
-    foreach($projects as $project) {
+  }
+
+  // descripcion de proyecto para index
+  public function showProject(Request $request, $id) {
+      $project = Project::find($id);
+      if ($project == null) {
+        return redirect('/error');
+      }
       $project->etiquetas = "";
       foreach ($project->tags as $key => $tag) {
         if ( $key === 0 ) {
@@ -75,34 +97,11 @@ class ProjectsController extends Controller
           $project->etiquetas .= ", " . $tag->es_name;
         }
       }
-    }
 
-    $param = [
-      'tags' => $tags,
-      'projects' => $projects,
-    ];
-    return view('index', $param);
-  }
-
-  // descripcion de proyecto para index
-  public function projectDescription($id) {
-    $project = Project::find($id);
-    if ($project == null) {
-      return redirect('/error');
-    }
-    $project->etiquetas = "";
-    foreach ($project->tags as $key => $tag) {
-      if ( $key === 0 ) {
-        $project->etiquetas .= $tag->es_name;
-      } else {
-        $project->etiquetas .= ", " . $tag->es_name;
-      }
-    }
-
-    $param = [
-      'project' => $project
-    ];
-    return view('projects.show', $param);
+      $param = [
+        'project' => $project
+      ];
+      return view('projects.show', $param);
   }
 
   // ir a la pag para crear proyecto

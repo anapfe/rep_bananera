@@ -18,10 +18,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Scripts -->
-  <script src="{{ asset('js/frontdesk.js') }}"></script>
-
 </head>
 
 <body>
@@ -76,12 +72,17 @@ Salir
 
 @yield('content')
 
-@yield('scripts')
-
 </body>
+
 <footer class="main">
   <p class="footer">
-    © 2020. Ana Pfefferkorn. All Rights Reserved.
+    © 2020. Ana Pfefferkorn. Todos los derechos reservados.
   </p>
 </footer>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/frontdesk.js') }}"></script>
+@yield('js')
 </html>

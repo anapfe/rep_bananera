@@ -3,7 +3,7 @@
 @section('content')
   <div class="main">
     <div class="wrapper">
-      <img class="studio-img" src=" {{ asset('images/studio.jpg') }}" alt="studio">
+      <img class="studio-img" src=" {{ asset('images/le_me.jpg') }}" alt="studio">
     </div>
     <div class="studio">
       @if (App::isLocale('en'))
@@ -37,7 +37,9 @@
           Me apasionan muchas cosas, tengo muchos hobbies y siempre me gusta estar aprendiendo. Hice muchos cursos como ser serigrafía artesanal, crochet, bordado chino, bordado clásico, fotografía y laboratorio blanco y negro, revelado color, iluminación en estudio y muchas cosas más.
         </p>
       @endif
-
+      <div class="wrapper">
+        <img class="studio-img" src=" {{ asset('images/studio.jpg') }}" alt="studio">
+      </div>
     </div>
   </div>
 

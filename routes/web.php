@@ -21,8 +21,8 @@ Route::group( [ 'middleware' =>'setlocale' ], function() {
   Route::get('/estudio', 'HomeController@us');
   Route::get('/contacto', 'HomeController@contactUs');
   // Route::get('/tienda', 'HomeController@store'); por el momento no tiene tienda
-  Route::get('/proyecto/{id}', 'ProjectsController@projectDescription');
-  Route::get('/proyectos/{tag}', 'ProjectsController@listProjectsByTag');
+  Route::get('/proyecto/{id}', 'ProjectsController@showProject');
+  // Route::get('/proyectos/{tag}', 'ProjectsController@listProjectsByTag');
 
 });
 
@@ -31,7 +31,7 @@ Route::group( [ 'middleware' =>'admin' ], function() {
 
   // Admin
   Route::get('/admin', 'HomeController@indexAdmin');
-  
+
   Route::prefix('admin')->group(function () {
 
     // Rutas Proyectos

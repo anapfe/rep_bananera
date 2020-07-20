@@ -71,26 +71,26 @@ window.addEventListener('load', function() {
   // current page menu -end
 
   //current page tag
-  try {
-    var currentUrl = window.location.href;
-    var homeUrl = window.location.hostname;
-    var tags = document.querySelectorAll('.tag');
-    if (currentUrl == 'http://' + homeUrl + ':8000/' || currentUrl == 'http://' + homeUrl + '/' ) {
-      // do nosing
-    } else {
-      tags.forEach(function(element) {
-        var tag = element.children[0];
-        var tagUrl = tag.href;
-        if (currentUrl === tagUrl) {
-          tag.classList.add('tag-selected');
-        } else {
-          // tag.classList.add('tag-not-selected');
-        };
-      });
-    };
-  } catch (error) {
-
-  };
+  // try {
+  //   var currentUrl = window.location.href;
+  //   var homeUrl = window.location.hostname;
+  //   var tags = document.querySelectorAll('.tag');
+  //   if (currentUrl == 'http://' + homeUrl + ':8000/' || currentUrl == 'http://' + homeUrl + '/' ) {
+  //     // do nosing
+  //   } else {
+  //     tags.forEach(function(element) {
+  //       var tag = element.children[0];
+  //       var tagUrl = tag.href;
+  //       if (currentUrl === tagUrl) {
+  //         tag.classList.add('tag-selected');
+  //       } else {
+  //         // tag.classList.add('tag-not-selected');
+  //       };
+  //     });
+  //   };
+  // } catch (error) {
+  //
+  // };
   //current page tag -end
 
 });
