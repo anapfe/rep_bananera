@@ -1,3 +1,22 @@
+// esta funcion es porque no se vuelve a ejectura el frontdesjk js y no sé como hacer para que se vuelva a ejecutar
+function projectCaption() {
+  var projectCaption = document.querySelectorAll('.project-caption');
+  projectCaption.forEach(function(element)
+  {
+    element.addEventListener('mouseover', function() {
+      var parent = element.parentElement;
+      var child = parent.children[1];
+      child.classList.add('show-caption');
+    });
+  });
+  projectCaption.forEach(function(element)
+  {
+    element.addEventListener('mouseout', function() {
+      element.classList.remove('show-caption');
+    });
+  });
+}
+
 function ajaxLoad( filename, content ){
   content = typeof content !== 'undefined' ? content : 'content';
 
@@ -17,6 +36,7 @@ function ajaxLoad( filename, content ){
       var contenedor = document.querySelector('#content');
       contenedor.innerHTML = contenido;
       var loading = document.querySelector('.loading');
+      projectCaption();
 
     };
   };

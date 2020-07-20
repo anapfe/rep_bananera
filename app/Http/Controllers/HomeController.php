@@ -46,8 +46,6 @@ class HomeController extends Controller
       $projects = Project::orderBy('year', 'DESC')->get();
     }
 
-    // return view('index', compact('tag', 'tags', 'projects'));
-
     //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
     if ($request->ajax()) {
       //va a los datos
