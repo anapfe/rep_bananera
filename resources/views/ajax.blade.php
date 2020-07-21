@@ -1,32 +1,69 @@
-@extends('layouts.frontLayout')
+<div class="main">
+  <div class="tag-filter wrapper">
+    <ul>
+      <li class="tag">
+        <a class="{{request()->session()->get('tag')==''?'tag-selected':''}}" href="javascript:ajaxLoad('{{ url( '/?tag='. ' ' ) }}')">
+          @if (App::isLocale('en'))
+            all
+          @elseif (App::isLocale('cat'))
+            tots
+          @else
+            todos
+          @endif
+        </a>
+      </li>
 
-@section('css')
-  <style>
-  /* .loading {
-    background :lightgrey;
-    padding: 15px;
-    position: fixed;
-    border-radius: 4px;
-    left:50%;
-    top: 50%;
-    text-align: center;
-    margin : -40px 0 0 -50px;
-    z-index: 2000;
-    display: none;
-  } */
-</style>
-@endsection
-@section('content')
-  <div id= "content">
-    @include('index')
+      @foreach ($tags as $tag)
+        <li class="tag">
+          @if (App::isLocale('en'))
+            <a class="{{request()->session()->get('tag')==$tag->es_name?'tag-selected':''}}" href="javascript:ajaxLoad('{{ url( '/?tag='. $tag->es_name ) }}')">{{ $tag->en_name}}</a>
+          @elseif (App::isLocale('cat'))
+            <a class="{{request()->session()->get('tag')==$tag->es_name?'tag-selected':''}}" href="javascript:ajaxLoad('{{ url( '/?tag='. $tag->es_name ) }}')">{{ $tag->cat_name}}</a>
+          @else
+            {{-- esta linea ejecuta la funcion ajaxLoad con los datos pasados  --}}
+            <a class="{{request()->session()->get('tag')==$tag->es_name?'tag-selected':''}}" href="javascript:ajaxLoad('{{ url( '/?tag='. $tag->es_name ) }}')">{{ $tag->es_name}}</a>
+          @endif
+        </li>
+      @endforeach
+    </ul>
   </div>
-  {{-- <div class="loading">
-    <i class="fa fa-refresh fa-spin fa-2x fa-tw"></i>
-    <br>
-    <span>Loading...</span>
-  </div> --}}
-@endsection
-
-@section('js')
-  <script src="{{ asset('js/ajax.js') }}"></script>
-@endsection
+  <div class="project-wrapper">
+    <div class="project-masonry">
+      @foreach ($projects as $project)
+        <div class="project-card">
+          <a class="project-link" href="{{ '/proyecto/' . $project->id }}">
+            <img class="project-img" src="{{ asset( '/storage/' . $project->primary_img )}}" alt="{{ $project->title }}">
+            <div class="project-caption">
+              <div>
+                <div>
+                  <h3 class="project-title">{{ $project->title }}</h3>
+                  <h2 class="tag-name">
+                    @foreach ($project->tags as $key => $tag)
+                      @if ($key === 0)
+                        @if (App::isLocale('en'))
+                          {{ $tag->en_name }}
+                        @elseif (App::isLocale('cat'))
+                          {{ $tag->cat_name }}
+                        @else
+                          {{ $tag->es_name }}
+                        @endif
+                      @else
+                        @if (App::isLocale('en'))
+                          {{ ', ' . $tag->en_name }}
+                        @elseif (App::isLocale('cat'))
+                          {{ ', ' . $tag->cat_name }}
+                        @else
+                          {{ ', ' . $tag->es_name }}
+                        @endif
+                      @endif
+                    @endforeach
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      @endforeach
+    </div>
+  </div>
+</div>

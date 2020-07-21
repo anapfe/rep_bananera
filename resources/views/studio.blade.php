@@ -18,7 +18,7 @@
         </p>
       @elseif (App::isLocale('cat'))
         <p>
-          El meu nom és Ana Pfefferkorn, vaig néixer a Vicente Lopez el 21 de març de 1988. Sóc dissenyadora gràfica graduada de la UBA des del 2015 i desenvolupadora web fullstack de Digital House des 2017. Des de fa molts anys treball en el negoci familiar, Recanvis Mitre, que em va permetre crecerr, formar-me i avui em permet fer possible aquest estudi.
+          El meu nom és Ana Pfefferkorn, vaig néixer a Vicente Lopez el 21 de març de 1988. Sóc dissenyadora gràfica graduada de la UBA des del 2015 i desenvolupadora web fullstack de Digital House des 2017. Des de fa molts anys treball en el negoci familiar, Recanvis Mitre, que em va permetre crecer, formar-me i avui em permet fer possible aquest estudi.
         </p>
         <p>
           Fa diversos anys també treball de forma freelance per a l'estudi de disseny industrial que té el meu germà, Ignacio Pfefferkorn, amb els seus socis on vaig tenir la gran oportunitat de dissenyar una identitat que aprecio molt que és Altoestudio.
@@ -28,7 +28,7 @@
         </p>
       @else
         <p>
-          Mi nombre es Ana Pfefferkorn, nací en Vicente Lopez el 21 de marzo de 1988. Soy diseñadora gráfica graduada de la UBA desde el 2015 y desarrolladora web fullstack de Digital House desde 2017. Desde hace muchos años trabajo en el negocio familiar, Repuestos Mitre, que me permitió crecerr, formarme y hoy me permite hacer posible este estudio.
+          Mi nombre es Ana Pfefferkorn, nací en Vicente Lopez el 21 de marzo de 1988. Soy diseñadora gráfica graduada de la UBA desde el 2015 y desarrolladora web fullstack de Digital House desde 2017. Desde hace muchos años trabajo en el negocio familiar, Repuestos Mitre, que me permitió crecer, formarme y hoy me permite hacer posible este estudio.
         </p>
         <p>
           Hace varios años también trabajo de forma freelance para el estudio de diseño industrial que tiene mi hermano, Ignacio Pfefferkorn, con sus socios donde tuve la gran oportunidad de diseñar una identidad que aprecio mucho que es Altoestudio.
@@ -37,9 +37,9 @@
           Me apasionan muchas cosas, tengo muchos hobbies y siempre me gusta estar aprendiendo. Hice muchos cursos como ser serigrafía artesanal, crochet, bordado chino, bordado clásico, fotografía y laboratorio blanco y negro, revelado color, iluminación en estudio y muchas cosas más.
         </p>
       @endif
-      <div class="wrapper">
-        <img class="studio-img" src=" {{ asset('images/studio.jpg') }}" alt="studio">
-      </div>
+    </div>
+    <div class="wrapper">
+      <img class="studio-img" src=" {{ asset('images/studio.jpg') }}" alt="studio">
     </div>
   </div>
 

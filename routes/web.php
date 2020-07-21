@@ -16,12 +16,13 @@ Auth::routes();
 
 // Publico is setLocale para el idioma del frontOffice
 Route::group( [ 'middleware' =>'setlocale' ], function() {
-
   Route::get('/', 'HomeController@index')->name('home');
+
   Route::get('/estudio', 'HomeController@us');
   Route::get('/contacto', 'HomeController@contactUs');
   // Route::get('/tienda', 'HomeController@store'); por el momento no tiene tienda
   Route::get('/proyecto/{id}', 'ProjectsController@showProject');
+
   // Route::get('/proyectos/{tag}', 'ProjectsController@listProjectsByTag');
 
 });

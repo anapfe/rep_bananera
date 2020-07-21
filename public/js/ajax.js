@@ -18,26 +18,25 @@ function projectCaption() {
 }
 
 function ajaxLoad( filename, content ){
-  content = typeof content !== 'undefined' ? content : 'content';
+  content = typeof content !== 'undefined' ? content : 'content'
 
   // iniciamos ajax
   var ajax = new XMLHttpRequest();
+
   // Le decimos al objeto que cuando cambia su estado (tiene 4 estados, el que nos importa es le 4to) corra la función.
   ajax.onreadystatechange = function(){
     // Si el estado es el 4to (significa que recibimos datos) y el status (http) es 200 (de nuevo, significa que todo está perfecto) hacemos algo.
     if(this.readyState == 4 && this.status == 200){
       // Guardamos en una variable, this(se refiere a ajax de arriba).responseText que nos devuelve el json. Usando JSON.parse() lo convertimos en objeto.
       var contenido = this.responseText;
-
       //la siguiente linea es para cuando traigo un JSON de algun lado tipo consumo de API
       // var contenido = JSON.parse(this.responseText);
 
-      //mi codico va a partir de acá. HACER ALGO CON LA INFO QUE VIENE
+      //mi codigo va a partir de acá. HACER ALGO CON LA INFO QUE VIENE
       var contenedor = document.querySelector('#content');
       contenedor.innerHTML = contenido;
-      var loading = document.querySelector('.loading');
+      // var loading = document.querySelector('.loading');
       projectCaption();
-
     };
   };
 

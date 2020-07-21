@@ -49,11 +49,34 @@ class HomeController extends Controller
     //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
     if ($request->ajax()) {
       //va a los datos
-      return view('index', compact('tag', 'tags', 'projects'));
+      return view('ajax', compact('tag', 'tags', 'projects'));
     } else {
       // va a la página normal
-      return view('ajax', compact('tag', 'tags', 'projects'));
+      return view('index', compact('tag', 'tags', 'projects'));
     }
+    // return view('index', compact('tag', 'tags', 'projects'));
+  }
+
+
+  //esta funcion está porque ajax() no valida true
+  public function getContent(Request $request) {
+
+    $request->session()->put('tag', $request
+    ->has('tag') ? $request->get('tag') : ($request->session()
+    ->has('tag') ? $request->session()->get('tag') : ''));
+
+    //comparo el dato traigo por request y el de la DB
+    $tag = Tag::where("es_name", "=", $request->session()->get('tag'))->first();
+    //se traen todos los nombres para pasarlos por el filtro
+    $tags = Tag::orderBy('es_name', 'asc')->get();
+
+    // si tag está vacio, traeme todos los proyectos
+    if ($tag != '') {
+      $projects = $tag->projects;
+    } else {
+      $projects = Project::orderBy('year', 'DESC')->get();
+    }
+    return view('ajax', compact('tag', 'tags', 'projects'));
   }
 
   // cambiar idioma
