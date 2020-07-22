@@ -44,6 +44,16 @@ class HomeController extends Controller
       $projects = $tag->projects;
     } else {
       $projects = Project::orderBy('year', 'DESC')->get();
+      // foreach ($projects as $project) {
+      //   $project->etiquetas = "";
+      //   foreach ($project->tags as $key => $tag) {
+      //     if ( $key === 0 ) {
+      //       $project->etiquetas .= $tag->es_name;
+      //     } else {
+      //       $project->etiquetas .= ", " . $tag->es_name;
+      //     }
+      //   }
+      // }
     }
 
     //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
@@ -52,7 +62,7 @@ class HomeController extends Controller
       return view('ajax', compact('tag', 'tags', 'projects'));
     } else {
       // va a la página normal
-      return view('index', compact('tag', 'tags', 'projects'));
+      return view('index', compact('tag', 'tags', 'projects', 'project->etiquetas'));
     }
     // return view('index', compact('tag', 'tags', 'projects'));
   }

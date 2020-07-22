@@ -19,6 +19,8 @@ function projectCaption() {
 
 function ajaxLoad( filename, content ){
   content = typeof content !== 'undefined' ? content : 'content'
+  var loader = document.querySelector('.loader');
+  loader.style.display = "block";
 
   // iniciamos ajax
   var ajax = new XMLHttpRequest();
@@ -31,12 +33,12 @@ function ajaxLoad( filename, content ){
       var contenido = this.responseText;
       //la siguiente linea es para cuando traigo un JSON de algun lado tipo consumo de API
       // var contenido = JSON.parse(this.responseText);
-
       //mi codigo va a partir de acá. HACER ALGO CON LA INFO QUE VIENE
       var contenedor = document.querySelector('#content');
       contenedor.innerHTML = contenido;
       // var loading = document.querySelector('.loading');
       projectCaption();
+      loader.style.display = "none";
     };
   };
 
@@ -44,6 +46,7 @@ function ajaxLoad( filename, content ){
   ajax.open("GET", filename);
   //le avisa a la página que recibe que es una petición de AJAX
   ajax.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
   //envia la petición
   ajax.send();
 };

@@ -16,6 +16,10 @@
 
   </div>
   <div class="project-data">
+    <div class="right-side">
+      <h4><span class="bold">{{ trans('file.año') }}: </span>{{ $project->year }}</h4>
+      <h4><span class="bold">{{ trans('file.cliente') }}: </span>{{ $project->client }}</h4>
+    </div>
     <div class="left-side">
       <div class="top-left-side">
         <h3 class="project-data-title">
@@ -34,10 +38,6 @@
           {{ $project->es_description }}
         @endif
       </div>
-    </div>
-    <div class="right-side">
-      <h4><span class="bold">{{ trans('file.año') }}: </span>{{ $project->year }}</h4>
-      <h4><span class="bold">{{ trans('file.cliente') }}: </span>{{ $project->client }}</h4>
     </div>
   </div>
 </div>
