@@ -204,7 +204,7 @@ color: coral;
 /* FIN DE NO SE TOCA */
 
 .loader {
-  border: 10px solid white;
+  border: 10px solid #faf5ef;
   border-radius: 50%;
   border-top: 10px solid black;
   width: 60px;
