@@ -96,6 +96,7 @@ h4 {
 }
 .main {
   position: relative;
+  padding-top: 40px;
 }
 @media (min-width: 470px) {
   .main {
@@ -396,6 +397,7 @@ color: coral;
   }
   .project-data {
     display: flex;
+    flex-direction: row-reverse;
   }
   .left-side {
     width: 70%;

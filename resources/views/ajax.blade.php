@@ -39,24 +39,22 @@
                   <h3 class="project-title">{{ $project->title }}</h3>
                   <h2 class="tag-name">
                     @foreach ($project->tags as $key => $tag)
-                      @if ($key === 0)
+                      @if ($loop->first && count($project->tags) > 1)
                         @if (App::isLocale('en'))
-                          {{$tag->en_name}}
+                          {{$tag->en_name . ","}}
                         @elseif (App::isLocale('cat'))
-                          {{$tag->cat_name}}
+                          {{$tag->cat_name . ","}}
                         @else
-                          {{$tag->es_name}}
+                          {{$tag->es_name . ","}}
                         @endif
                       @else
-                        ,
-                        {{App::isLocale('en')?$tag->en_name:(App::isLocale('cat')?$tag->cat_name:$tag->es_name)}}
-                        {{-- @if (App::isLocale('en'))
+                        @if (App::isLocale('en'))
                           {{$tag->en_name }}
                         @elseif (App::isLocale('cat'))
                           {{$tag->cat_name }}
                         @else
-                          {{$tag->es_name }} --}}
-                        {{-- @endif --}}
+                          {{$tag->es_name }}
+                        @endif
                       @endif
                     @endforeach
                   </h2>
