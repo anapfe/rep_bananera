@@ -166,7 +166,7 @@ class ProjectsController extends Controller
       "cat_description" => $request->input('cat_description'),
       "year" => $request->input("year"),
       "client" => $request->input("client"),
-      'slug' => slug($request->input('title') . ' ' . $request->input('client')),
+      'slug' => slug($request->input('title') . ' ' . $request->input('client') . ' ' . $request->input('year')),
       "primary_img" => $path
     ]);
 
@@ -237,6 +237,6 @@ class ProjectsController extends Controller
   }
 
   public function error404() {
-    return view('projects.error404');
+    return view('error404');
   }
 }

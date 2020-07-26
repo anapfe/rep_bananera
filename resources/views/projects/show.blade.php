@@ -8,12 +8,13 @@
   @if(isset($project->images))
     <div class="project-images">
       @foreach ($project->images as $image)
-        <div class="project-image">
-          <img src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
-        </div>
+        @if ($loop->first)
+          <div class="project-image">
+            <img src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
+          </div>
+        @endif
       @endforeach
     @endif
-
   </div>
   <div class="project-data">
     <div class="right-side">
@@ -40,5 +41,15 @@
       </div>
     </div>
   </div>
-</div>
+  @if(isset($project->images))
+    <div class="project-images">
+      @foreach ($project->images as $image)
+        @if (!$loop->first)
+          <div class="project-image">
+            <img src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
+          </div>
+        @endif
+      @endforeach
+    @endif
+  </div>
 @endsection

@@ -72,7 +72,7 @@ Route::group( [ 'middleware' =>'admin' ], function() {
 });
 
 // // no se encuentra proyecto / no sé si se puede borrar
-// Route::get('/error', 'ProjectsController@error404');
+Route::get('/error', 'ProjectsController@error404');
 
 // cambiar idioma
 Route::get('/{lang}', 'HomeController@changeLang');

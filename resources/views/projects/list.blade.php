@@ -28,12 +28,12 @@
         <table>
           <tr>
             <th class="project-10">Foto Inicio</th>
-            <th class="project-15"><a href="/proyectos_titulo">Título ˅</a></th>
+            <th class="project-15"><a class="orderBy" href="/proyectos_titulo">Título ˅</a></th>
             <th class="project-description">Descripción ES</th>
             <th class="project-description">Descripción EN</th>
             <th class="project-description">Descripción CAT</th>
-            <th class="project-ctrl"><a href="/admin/proyectos_año">Año ˅</a></th>
-            <th class="project-10"><a href="/admin/proyectos_cliente">Cliente ˅</a></th>
+            <th class="project-ctrl"><a class="orderBy" href="/admin/proyectos_año">Año ˅</a></th>
+            <th class="project-10"><a class="orderBy" href="/admin/proyectos_cliente">Cliente ˅</a></th>
             <th class="project-15">Etiquetas</th>
             <th class="project-ctrl">Editar</th>
             <th class="project-ctrl">Eliminar</th>
@@ -54,12 +54,10 @@
                 @foreach ($project->tags as $tag)
                   {{ $tag->es_name }},
                 @endforeach
-
-                {{-- {{ dd($project->tags[0]->name) }} --}}
               </td>
-              <td><a href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-              <td><a class="delete" href="/admin/proyecto_eliminar/{{$project->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-              <td><input type="checkbox" name="selectAll" class="select"> </td>
+              <td class="actions"><a class="edit" href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+              <td class="actions"><a class="delete" href="/admin/proyecto_eliminar/{{$project->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+              <td class="actions"><input type="checkbox" name="selectAll" class="select"> </td>
             </tr>
           @endforeach
         </table>

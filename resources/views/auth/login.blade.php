@@ -1,7 +1,7 @@
 @extends('layouts.frontLayout')
 
 @section('content')
-  <div class="main">
+  <div class="main-wrapper">
     <div class="caja">
       <div class="section-title">
         Login

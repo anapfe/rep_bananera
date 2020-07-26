@@ -1,18 +1,5 @@
 window.addEventListener('load', function() {
 
-  // menu izq
-  var item = document.querySelectorAll('.dropdown');
-  item.forEach(function(element)
-  {
-    element.addEventListener('click', function() {
-      var link = element.children[0];
-      var arrow = link.children[0];
-      arrow.classList.toggle('rotate');
-      var child = element.children[1];
-      child.classList.toggle('show');
-    });
-  });
-
   // select current page
   try {
     var currentUrl = window.location.href;
@@ -28,23 +15,23 @@ window.addEventListener('load', function() {
     });
   } catch(error) {
   };
-  //
-  // // select all
-  // try {
-  //   var all = document.querySelector('#selectAll');
-  //   all.addEventListener('click', function() {
-  //     var selected = document.querySelectorAll('.select');
-  //     selected.forEach(function(elem) {
-  //       if (elem.checked == true) {
-  //         elem.checked = false;
-  //       } else {
-  //         elem.checked = true;
-  //       }
-  //     });
-  //   });
-  // } catch(error) {
-  //
-  // };
+  
+  // select all
+  try {
+    var all = document.querySelector('#selectAll');
+    all.addEventListener('click', function() {
+      var selected = document.querySelectorAll('.select');
+      selected.forEach(function(elem) {
+        if (elem.checked == true) {
+          elem.checked = false;
+        } else {
+          elem.checked = true;
+        }
+      });
+    });
+  } catch(error) {
+
+  };
   //
   // // validacion de login
   //
