@@ -31,23 +31,31 @@
         <div class="div-right">
           <div class="input-div" id="description">
             <label class="form-label" for="description">Descripción</label>
-            <textarea class="input-textarea" name="description" value="{{ $project->description }}" >{{ $project->description }}</textarea>
+            <textarea class="input-textarea" name="description" value="{{ $project->es_description }}" >{{ $project->es_description }}</textarea>
+          </div>
+          <div class="input-div" id="en_description">
+            <label class="form-label" for="en_description">Descripción EN</label>
+            <textarea class="input-textarea" name="en_description" value="{{ $project->en_description }}" >{{ $project->en_description }}</textarea>
+          </div>
+          <div class="input-div" id="cat_description">
+            <label class="form-label" for="cat_description">Descripción CAT</label>
+            <textarea class="input-textarea" name="cat_description" value="{{ $project->cat_description }}" >{{ $project->cat_description }}</textarea>
           </div>
         </div>
 
         <div class="div-tags">
           <label class="form-label">Etiquetas</label>
           @foreach ($tags as $tag)
-            <input type="checkbox" name="tags[]" value="{{ $tag->id }}" id="{{ $tag->name }}"
+            <input type="checkbox" name="tags[]" value="{{ $tag->id }}" id="{{ $tag->es_name }}"
             @if (isset($etiquetas))
               @foreach ($etiquetas as $etiqueta)
-                @if ($tag->name === $etiqueta->name)
+                @if ($tag->es_name === $etiqueta->es_name)
                   checked
                 @endif
               @endforeach
             @endif
             >
-            <label for="{{ $tag->name }}" class="tag-text">{{$tag->name}}</label>
+            <label for="{{ $tag->es_name }}" class="tag-text">{{$tag->es_name}}</label>
           @endforeach
         </div>
         <div class="div-left">

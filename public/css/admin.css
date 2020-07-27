@@ -54,9 +54,7 @@ body {
   font-size: 17px;
   line-height: 27px;
   font-weight: 400;
-  /* background-color: rgb(255, 246, 238); */
   background-color: #faf5ef;
-  /* background-image: url('../images/background.png'); */
   background-repeat: repeat;
 }
 header {
@@ -64,6 +62,8 @@ header {
   margin: 50px auto 70px auto;
   align-items: top;
   padding-top: 0;
+  display: flex;
+  justify-content: space-between;
 }
 .site {
   padding-top: 13px;
@@ -109,36 +109,26 @@ a:hover {
 .left-nav {
   width: 160px;
 }
-.user-data {
-  width: 100%;
-  text-align: left;
-}
-.admin-foto {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  object-fit: contain;
-  margin-bottom: 8px;
-  border: 2px solid coral;
-}
-.username {
-  font-weight: 700;
-  display: block;
+.adminItem {
+  font-size: 20px;
   color: coral;
+  font-weight: bold;
 }
 .menu {
-  margin-top: 20px;
+  margin-top: 60px;
   width: 100%;
   font-size: 0.9em;
 }
 .menu-item {
   color: grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
   display: block;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
+}
+.menu-item:last-child {
+  /* border-top: 1px solid grey; */
 }
 .menu-item a:hover {
   font-weight: 700;
@@ -234,10 +224,6 @@ justify-content: space-between;
 #client {
   width: 60%;
 }
-
-.orderBy {
-  color: black;
-}
 .div-tags {
   margin-bottom: 20px;
   margin-right: 50px;
@@ -246,7 +232,6 @@ justify-content: space-between;
 }
 input[type="checkbox"] {
   margin-right: 5px;
-  vertical-align: middle;
 }
 .tag-text {
   color: coral;
@@ -278,7 +263,7 @@ input[type="checkbox"] {
   height: 25px;
 }
 .btn {
-  padding: 5 20px;
+  padding: 5px 20px;
   background-color: #FF9966;
   color: white;
   text-transform: uppercase;
@@ -294,13 +279,15 @@ input[type="checkbox"] {
   font-family: roboto;
 }
 .control {
-  font-size: 40px;
   font-weight: bold;
   font-family: Roboto;
   margin: 0 20px;
   line-height: 25px;
 }
-.control-select {
+.control a {
+  font-size: 40px;
+}
+.controls select {
   text-align: left;
   border: 1px solid coral;
   height: 25px;
@@ -327,6 +314,7 @@ input[type="checkbox"] {
   background-color: transparent;
   position: relative;
   right: 30px;
+  bottom: 4px;
 }
 .results {
   font-size: 0.9em;
@@ -350,31 +338,72 @@ table td {
   line-height: 1.5em;
   vertical-align: top;
 }
-.project-15 {
-  width: 15%;
-}
-.project-10 {
-  width: 10%;
-  padding: 0;
-}
-.project-description {
-  width: 25%;
-}
-.project-ctrl {
-  width: 6%;
-}
-.project-img {
-  width: 100px;
-}
 
+.projectBlock {
+  width: 100%;
+  background-color: #f5eade;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.projectBlock:last-child {
+  margin-bottom: 0;
+}
+.projectBlock .one {
+  margin-right: 20px;
+}
+.projectBlock .one img {
+  max-width: 100px;
+}
+.projectBlock .two {
+  margin-right: 20px;
+}
+.projectBlock .title {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.projectBlock .tags {
+  font-size: 15px;
+  font-weight: lighter;
+  font-style: italic;
+  display: block;
+  margin-bottom: 20px;
+}
+.projectBlock .description {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.projectBlock .three {
+  margin-right: 20px;
+  width: 300px;
+}
+.projectBlock .client {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+}
+.projectBlock .year {
+  font-size: 15px;
+}
+.projectBlock .four {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+}
 .actions {
-  text-align: center;
+  align-self: flex-start;
 }
 .edit {
   color: green;
 }
 .delete {
   color: red;
+}
+.projectBlock .select {
 }
 
 @media (min-width: 470px) {

@@ -22,11 +22,6 @@ class ProjectsController extends Controller
 
   // lista proyectos
   public function listProjects() {
-    // $projects = Project::orderBy('created_at', 'desc')->get();
-    // $param = [
-    //   'projects' => $projects,
-    // ];
-    // return view('projects.list', $param);
     return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->get()]);
   }
 

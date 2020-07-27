@@ -45,15 +45,14 @@
           <li class="menu-item"> <a href="/en">en</a> </li>
           <li class="menu-item"> <a href="/cat">cat</a> </li>
         @endif
-
-        {{-- @auth
-        <li class="menu-item"><a href="/carrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-      @endauth --}}
-    </ul>
-    <a class="menu-hamburger">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </a>
-  </nav>
+      {{-- @auth
+      <li class="menu-item"><a href="/carrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+    @endauth --}}
+  </ul>
+  <a class="menu-hamburger">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </a>
+</nav>
 </header>
 {{-- @guest
 @else

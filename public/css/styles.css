@@ -498,8 +498,8 @@ color: coral;
     justify-content: space-between;
   }
   .btn {
-    padding: 5px 15px;
-    background-color: coral;
+    padding: 5px 20px;
+    background-color: #FF9966;
     color: white;
     text-transform: uppercase;
   }
