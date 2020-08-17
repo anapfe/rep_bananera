@@ -1,6 +1,6 @@
-<div class="main">
+{{-- <div class="main"> --}}
   {{-- filtro de proyectos por tag --}}
-  <div class="tag-filter wrapper">
+  <div class="tag-filter">
     <ul>
       <li class="tag">
         <a class="{{request()->session()->get('tag')==''?'tag-selected':''}}" href="javascript:ajaxLoad('{{ url( '?tag='. ' ' ) }}')">
@@ -69,4 +69,4 @@
     </div>
   </div>
   {{-- END masonry de proyectos  --}}
-</div>
+{{-- </div> --}}

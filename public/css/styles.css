@@ -184,6 +184,9 @@ color: coral;
 /* inicio no se toca */
 .project-wrapper {
   /* padding: 10px 0 10px 0; */
+  padding: 50px 0;
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
 }
 @media (min-width: 470px) {
   .project-wrapper {
@@ -332,7 +335,6 @@ color: coral;
 footer {
   padding-top: 60px;
   text-align: center;
-  border-top: solid 1px black;
   font-weight: 500;
   font-size: 18px;
 }
@@ -387,9 +389,6 @@ footer {
   }
   .tag-filter {
     display: flex;
-    padding: 0;
-    border-bottom: solid 1px black;
-    margin: 0 0 50px 0;
   }
   .tag-filter li {
     margin: 0 10px;
@@ -397,7 +396,6 @@ footer {
   footer {
     padding-top: 60px;
     text-align: center;
-    border-top: solid 1px black;
     font-weight: 500;
     font-size: 13px;
   }
@@ -427,7 +425,7 @@ footer {
 
 @media (min-width: 720px) {
   body {
-    padding: 80px;
+    padding: 85px;
   }
   .header {
     height: 214px;
@@ -455,6 +453,7 @@ footer {
     display: inline;
   }
   .project-masonry {
+    margin-bottom: -135px;
     -ms-column-count: 3;
     -moz-column-count: 3;
     -webkit-column-count: 3;
