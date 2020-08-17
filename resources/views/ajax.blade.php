@@ -1,4 +1,5 @@
 <div class="main">
+  {{-- filtro de proyectos por tag --}}
   <div class="tag-filter wrapper">
     <ul>
       <li class="tag">
@@ -12,7 +13,6 @@
           @endif
         </a>
       </li>
-
       @foreach ($tags as $tag)
         <li class="tag">
           @if (App::isLocale('en'))
@@ -27,6 +27,8 @@
       @endforeach
     </ul>
   </div>
+  {{-- END filtro de proyectos por tag --}}
+  {{-- masonry de proyectos  --}}
   <div class="project-wrapper">
     <div class="project-masonry">
       @foreach ($projects as $project)
@@ -41,11 +43,11 @@
                     @foreach ($project->tags as $key => $tag)
                       @if ($loop->first && count($project->tags) > 1)
                         @if (App::isLocale('en'))
-                          {{$tag->en_name . ","}}
+                          {{$tag->en_name . ','}}
                         @elseif (App::isLocale('cat'))
-                          {{$tag->cat_name . ","}}
+                          {{$tag->cat_name . ','}}
                         @else
-                          {{$tag->es_name . ","}}
+                          {{$tag->es_name . ','}}
                         @endif
                       @else
                         @if (App::isLocale('en'))
@@ -66,4 +68,5 @@
       @endforeach
     </div>
   </div>
+  {{-- END masonry de proyectos  --}}
 </div>

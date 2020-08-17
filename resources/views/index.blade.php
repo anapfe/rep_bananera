@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-  <div id= "content">
+  <section id= "content">
     @include('ajax')
-  </div>
+  </section>
   <div class="loader">
   </div>
 @endsection
