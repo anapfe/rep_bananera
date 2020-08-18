@@ -185,7 +185,6 @@ color: coral;
 .project-wrapper {
   /* padding: 10px 0 10px 0; */
   padding: 50px 0;
-  border-bottom: solid 1px black;
   border-top: solid 1px black;
 }
 @media (min-width: 470px) {
@@ -273,7 +272,7 @@ color: coral;
 .project-img {
   width: 100%;
 }
-.project-image img {
+.project-image {
   width: 100%;
 }
 .project-title {
@@ -316,7 +315,7 @@ color: coral;
 .left-side {
   /* width: 70%; */
   /* padding-right: 20px; */
-  padding: 0 10px 40px 0px;
+  /* padding: 0 10px 40px 0px; */
 }
 .right-side {
   font-size: 0.8em;
@@ -337,6 +336,7 @@ footer {
   text-align: center;
   font-weight: 500;
   font-size: 18px;
+  border-top: solid 1px black;
 }
 #backTop {
   visibility: hidden;

@@ -9,9 +9,7 @@
     <div class="project-images">
       @foreach ($project->images as $image)
         @if ($loop->first)
-          <div class="project-image">
-            <img src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
-          </div>
+            <img class="project-image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
         @endif
       @endforeach
     @endif
@@ -45,9 +43,7 @@
     <div class="project-images">
       @foreach ($project->images as $image)
         @if (!$loop->first)
-          <div class="project-image">
-            <img src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
-          </div>
+            <img class="project-image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
         @endif
       @endforeach
     @endif

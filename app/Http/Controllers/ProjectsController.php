@@ -79,8 +79,8 @@ class ProjectsController extends Controller
   }
 
   // descripcion de proyecto para index
-  public function showProject(Request $request, $id) {
-      $project = Project::find($id);
+  public function showProject(Request $request, $slug) {
+      $project = Project::where("slug", "=", $slug)->first();
       if ($project == null) {
         return redirect('/error');
       }
@@ -161,7 +161,7 @@ class ProjectsController extends Controller
       "cat_description" => $request->input('cat_description'),
       "year" => $request->input("year"),
       "client" => $request->input("client"),
-      'slug' => slug($request->input('title') . ' ' . $request->input('client') . ' ' . $request->input('year')),
+      'slug' => kebab($request->input('title') . '-' . $request->input('client') . ' ' . $request->input('year')),
       "primary_img" => $path
     ]);
 

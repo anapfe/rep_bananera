@@ -22,10 +22,7 @@ Route::group( [ 'middleware' =>'setlocale' ], function() {
   Route::get('/estudio', 'HomeController@us');
   Route::get('/contacto', 'HomeController@contactUs');
   // Route::get('/tienda', 'HomeController@store'); por el momento no tiene tienda
-  Route::get('/proyecto/{id}', 'ProjectsController@showProject');
-
-  // Route::get('/proyectos/{tag}', 'ProjectsController@listProjectsByTag');
-
+  Route::get('/proyecto/{slug}', 'ProjectsController@showProject');
 });
 
 // paso middleware y prefix para el backoffice
