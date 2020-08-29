@@ -33,7 +33,7 @@
       <ul class="menu-items">
         <li class="menu-item"> <a href="/">{{ trans('file.proyectos') }}</a> </li>
         <li class="menu-item"> <a href="/estudio">{{ trans('file.estudio') }}</a> </li>
-        <li class="menu-item"> <a href="mailto:info@republicabananera.com">{{ trans('file.contacto') }}</a> </li>
+        <li class="menu-item"> <a href="mailto:hola@republicabananera.com.ar">{{ trans('file.contacto') }}</a> </li>
 
         @if (App::isLocale('en'))
           <li class="menu-item"> <a href="/es">es</a> </li>

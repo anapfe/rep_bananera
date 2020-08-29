@@ -9,7 +9,7 @@
     <div class="project-images">
       @foreach ($project->images as $image)
         @if ($loop->first)
-            <img class="project-image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
+            <img class="image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
         @endif
       @endforeach
     @endif
@@ -28,7 +28,7 @@
           {{ $project->etiquetas }}
         </h5>
       </div>
-      <div class="project-description">
+      <div class="text">
         @if (App::isLocale('en'))
           {{ $project->en_description }}
         @elseif (App::isLocale('cat'))
@@ -43,7 +43,7 @@
     <div class="project-images">
       @foreach ($project->images as $image)
         @if (!$loop->first)
-            <img class="project-image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
+            <img class="image" src="{{ asset ( 'storage/' . $image->path ) }}" alt="imagen">
         @endif
       @endforeach
     @endif
