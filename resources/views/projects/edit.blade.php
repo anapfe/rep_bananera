@@ -6,7 +6,7 @@
       <span>Proyectos - Editar</span>
     </div>
     <div class="main-body">
-      <form class="form-project" action="/proyecto_modificar/{{ $project->id }}" method="POST" enctype="multipart/form-data">
+      <form class="form-project" action="/admin/proyecto_modificar/{{ $project->id }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         {{ method_field('patch') }}
 

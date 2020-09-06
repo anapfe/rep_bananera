@@ -287,6 +287,9 @@ input[type="checkbox"] {
 .control a {
   font-size: 40px;
 }
+.control a:hover {
+  color: black;
+}
 .controls select {
   text-align: left;
   border: 1px solid coral;

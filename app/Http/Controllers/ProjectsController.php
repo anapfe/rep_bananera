@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \App\Project;
 use \App\Tag;
 use \App\Image;
+use Illuminate\Support\Str;
 
 class ProjectsController extends Controller
 {
@@ -161,11 +162,10 @@ class ProjectsController extends Controller
       "cat_description" => $request->input('cat_description'),
       "year" => $request->input("year"),
       "client" => $request->input("client"),
-      'slug' => kebab($request->input('title') . '-' . $request->input('client') . ' ' . $request->input('year')),
+      'slug' => Str::kebab($request->input('title') . $request->input('client') . "-" . $request->input('year')),
       "primary_img" => $path
     ]);
 
-    // dd($request->file('altImg'));
     if ($request->file('altImg') == !null) {
       $this->multiPhoto($request, $project);
     }
@@ -208,14 +208,18 @@ class ProjectsController extends Controller
       $project->primary_img = $project->primary_img;
     }
 
-    if (count($request->file('altImg')) > 0) {
-      $this->multiPhoto($request, $id);
+    // if (count($request->file('altImg')) > 0) {
+    //   $this->multiPhoto($request, $id);
+    // }
+
+    if ($request->file('altImg') == !null) {
+      $this->multiPhoto($request, $project);
     }
 
     $project->tags()->sync($request->input('tags'));
     $project->save();
 
-    return redirect('/proyectos');
+    return redirect('/admin/proyectos');
   }
 
   public function destroyProject($id)
@@ -228,7 +232,7 @@ class ProjectsController extends Controller
       $image->save();
     }
     $project->delete();
-    return redirect('/proyectos');
+    return redirect('/admin/proyectos');
   }
 
   public function error404() {
