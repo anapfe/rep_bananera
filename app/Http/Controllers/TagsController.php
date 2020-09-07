@@ -41,15 +41,21 @@ class TagsController extends Controller
   {
     $rules = [
       "es_name" => 'required',
+      "en_name" => 'required',
+      "cat_name" => 'required'
     ];
     $messages = [
       "required" => 'el campo es requerido',
     ];
     $request->validate($rules, $messages);
+
     $tag = Tag::create([
-      "es_name" => $request->input('es_name')
+      "es_name" => $request->input('es_name'),
+      "en_name" => $request->input('en_name'),
+      "cat_name" => $request->input('cat_name')
     ]);
-    return redirect('/etiquetas');
+    $tag->save();
+    return redirect('admin/etiquetas');
   }
 
 

@@ -54,7 +54,7 @@ body {
   font-size: 17px;
   line-height: 27px;
   font-weight: 400;
-  background-color: #faf5ef;
+  background-color: #eee;
   background-repeat: repeat;
 }
 header {
@@ -81,9 +81,6 @@ a {
   color: coral;
 }
 
-a:hover {
-  font-weight: 700;
-}
 .logo-mobile {
   display: block;
 }
@@ -120,17 +117,14 @@ a:hover {
   font-size: 0.9em;
 }
 .menu-item {
-  color: grey;
-  border-top: 1px solid grey;
+  color: black;
+  border-top: 1px solid rgb(255, 209, 161);
   display: block;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
 }
-.menu-item:last-child {
-  /* border-top: 1px solid grey; */
-}
-.menu-item a:hover {
+.menu-item:hover {
   font-weight: 700;
 }
 .menu-subitem {
@@ -159,9 +153,8 @@ a:hover {
   width: 100%; //no tocar
 }
 .section-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: grey;
+  font-size: 25px;
+  color: black;
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -170,8 +163,8 @@ a:hover {
   font-family: 'Playfair Display', serif;
 }
 .main-wrapper {
-  margin-left: 40px;
-  max-width: 400px;
+  margin-left: 60px;
+  max-width: 600px;
 }
 .form-div {
   width: 60%;
@@ -179,23 +172,27 @@ a:hover {
 .main-body {
   width: 100%;
 }
+.success-login {
+  width: 100%;
+  background-color: coral;
+  color: white;
+  padding: 10px;
+}
 .dropdown {
   line-height: 1;
 }
 .form-project {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
 }
 .input {
   margin-bottom: 20px;
   width: 500px;
+  display: inline-flex;
 }
 .input-div {
   margin-bottom: 20px;
   display: inline-block;
+  width: 600px;
 }
 .div-right, .div-left {
   width: 50%;
@@ -203,35 +200,30 @@ a:hover {
 .div-left {
   padding-right: 60px;
 }
-.index-img {
-  width: 100%;
+.edit-img {
+  width: 100px;
   margin-bottom: 20px;
+  border: solid 1px lightgrey;
+  margin-right: 20px;
 }
-/* .div-top, .div-bottom {
-width: 100%;
-display: block;
-}
-.div-bottom {
-display: flex;
-justify-content: space-between;
-} */
+
 #title, #name {
   width: 100%;
 }
 #year {
   width: 30%;
+  margin-right: 55px;
 }
 #client {
   width: 60%;
 }
-.div-tags {
+.tags-div {
   margin-bottom: 20px;
-  margin-right: 50px;
   width: 100%;
   display: block;
 }
 input[type="checkbox"] {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 .tag-text {
   color: coral;
@@ -240,21 +232,21 @@ input[type="checkbox"] {
 .input-project {
   width: 100%;
   border: 1px solid grey;
-  height: 25px;
+  height: 35px;
   display: block;
   font-size: 0.8em;
   padding-left: 8px;
 }
 .input-textarea {
   height: 87px;
-  width: 400px;
+  width: 589px;;
   border: 1px solid grey;
   font-family: roboto;
   padding: 5px;
 }
 .form-label {
   color: grey;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   display: block;
 }
 .input-login {
@@ -262,12 +254,24 @@ input[type="checkbox"] {
   border: 1px solid grey;
   height: 25px;
 }
+.cajitas-form {
+  margin-bottom: 40px;
+  width: 100%;
+}
 .btn {
   padding: 5px 20px;
   background-color: #FF9966;
   color: white;
   text-transform: uppercase;
+  margin-right: 30px;
 }
+.neg {
+  background-color: darkgrey;
+}
+.neg a {
+  color: white;
+}
+
 .btn:hover {
   background-color: grey;
 }
@@ -292,7 +296,7 @@ input[type="checkbox"] {
 }
 .controls select {
   text-align: left;
-  border: 1px solid coral;
+  border: 1px solid grey;
   height: 25px;
   font-size: 0.8em;
   width: 150px;
@@ -304,7 +308,7 @@ input[type="checkbox"] {
   display: flex;
 }
 .search-box {
-  border: 1px solid coral;
+  border: 1px solid grey;
   min-width: 100px;
   max-width: 200px;
   height: 25px;
@@ -318,6 +322,7 @@ input[type="checkbox"] {
   position: relative;
   right: 30px;
   bottom: 4px;
+  font-size: 15px;
 }
 .results {
   font-size: 0.9em;
@@ -344,11 +349,12 @@ table td {
 
 .projectBlock {
   width: 100%;
-  background-color: #f5eade;
+  /* background-color: #eee; */
   padding: 20px;
   display: flex;
   margin-bottom: 20px;
   justify-content: space-between;
+  border: solid 0.5px rgb(255, 209, 161);
 }
 .projectBlock:last-child {
   margin-bottom: 0;
@@ -361,10 +367,12 @@ table td {
 }
 .projectBlock .two {
   margin-right: 20px;
+  line-height: normal;
+  max-width: 350px;
 }
 .projectBlock .title {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -381,10 +389,10 @@ table td {
 }
 .projectBlock .three {
   margin-right: 20px;
-  width: 300px;
+  width: 200px;
 }
 .projectBlock .client {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
   display: block;
@@ -394,14 +402,17 @@ table td {
 }
 .projectBlock .four {
   display: flex;
-  width: 80px;
-  justify-content: space-between;
+  width: 100px;
+  justify-content: space-around;
 }
 .actions {
   align-self: flex-start;
 }
+.show {
+  color: black;
+}
 .edit {
-  color: green;
+  color: rgb(31, 156, 0);
 }
 .delete {
   color: red;

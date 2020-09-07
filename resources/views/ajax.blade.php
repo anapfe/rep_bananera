@@ -41,7 +41,7 @@
                   <h3 class="project-title">{{ $project->title }}</h3>
                   <h2 class="tag-name">
                     @foreach ($project->tags as $key => $tag)
-                      @if ($loop->first && count($project->tags) > 1)
+                      @if (count($project->tags) > 1 && !$loop->last)
                         @if (App::isLocale('en'))
                           {{$tag->en_name . ','}}
                         @elseif (App::isLocale('cat'))

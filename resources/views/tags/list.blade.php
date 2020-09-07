@@ -6,7 +6,7 @@
       <span>Etiquetas</span>
       <div class="controls">
         <div class="control">
-          <a href="/admin/proyecto_nuevo">+</a>
+          <a href="/admin/etiqueta_nueva">+</a>
         </div>
         <form class="search" action="/admin/buscarProyectos" method="get">
           <input class="search-box" type="text" name="search" value="" placeholder="buscar">
@@ -33,8 +33,8 @@
             <td>{{ $tag->es_name }}</td>
             <td>{{ $tag->en_name }}</td>
             <td>{{ $tag->cat_name }}</td>
-            <td class="actions"><a class="edit" href="/etiqueta_modificar/{{$tag->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-            <td class="actions"><a class="delete" href="/etiqueta_eliminar/{{$tag->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+            <td class="actions"><a class="edit" href="/admin/etiqueta_modificar/{{$tag->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+            <td class="actions"><a class="delete" href="/admin/etiqueta_eliminar/{{$tag->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
             <td class="actions"><input type="checkbox" name="selectAll" class="select"> </td>
           </tr>
         @endforeach

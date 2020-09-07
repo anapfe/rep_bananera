@@ -9,18 +9,18 @@
       <form class="form-project" action="/etiqueta_nueva" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
 
-
-          <div class="cajitas-form">
+        <div class="div-left">
+          <div class="div-top">
             <div class="input-div" id="es_name">
-              <label class="form-label" for="es_name">Nombre Español</label>
+              <label class="form-label" for="es_name">Nombre de la etiqueta</label>
               <input class="input-project" type="text" name="es_name" value="{{ old('es_name') }}" autofocus>
             </div>
             <div class="input-div" id="en_name">
-              <label class="form-label" for="en_name">Nombre Inglés</label>
+              <label class="form-label" for="en_name">Nombre de la etiqueta</label>
               <input class="input-project" type="text" name="en_name" value="{{ old('en_name') }}" autofocus>
             </div>
             <div class="input-div" id="cat_name">
-              <label class="form-label" for="cat_name">Nombre Catalán</label>
+              <label class="form-label" for="cat_name">Nombre de la etiqueta</label>
               <input class="input-project" type="text" name="cat_name" value="{{ old('cat_name') }}" autofocus>
             </div>
           </div>
@@ -30,6 +30,6 @@
             <button class="btn neg" type="cancel" name="button">Cancelar</button>
           </div>
         </form>
-
-    </div>
-  @endsection
+      </div>
+  </div>
+@endsection

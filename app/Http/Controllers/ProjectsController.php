@@ -118,7 +118,7 @@ class ProjectsController extends Controller
   }
   public function uploadPhoto($image, $project) {
     $extension = $image->getClientOriginalExtension();
-    $path = $image->storeAs("/project_img", uniqid() . "."  . $extension, 'public');
+    $path = $image->storeAs("/project_img", uniqid() . "." . $extension, 'public');
     $image = Image::create([
       'path' => $path
     ]);
