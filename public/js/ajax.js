@@ -22,10 +22,29 @@ function replaceContent(contenido) {
   contenedor.innerHTML = contenido;
 }
 
+// inicio masonry --------------------------------------------------
+function acomodar() {
+  const imgs = document.querySelectorAll('.project-img');
+  imgs.forEach(function(e) {
+    imgHeight = e.naturalHeight;
+    imgWidth = e.naturalWidth;
+    projectCard = e.parentElement.parentElement;
+    if (imgWidth > imgHeight) {
+      projectCard.style.gridRow = 'span 2';
+    } else if (imgWidth < imgHeight) {
+      projectCard.style.gridRow = 'span 4';
+    } else {
+      projectCard.style.gridRow = 'span 3';
+    };
+  });
+};
+
 function ajaxLoad( filename, content ){
   content = typeof content !== 'undefined' ? content : 'content'
   var loader = document.querySelector('.loader');
   loader.style.display = "block";
+  var loaderParent = document.querySelector('.loader-parent');
+  loaderParent.style.display = "block";
 
   // iniciamos ajax
   var ajax = new XMLHttpRequest();
@@ -44,6 +63,8 @@ function ajaxLoad( filename, content ){
       // var loading = document.querySelector('.loading');
       projectCaption();
       loader.style.display = "none";
+      loaderParent.style.display = "none";
+      acomodar();
     };
   };
 

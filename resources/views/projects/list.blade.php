@@ -34,7 +34,7 @@
               <img src="{{ asset ( 'storage/' . $project->primary_img ) }}" alt="">
             </div>
             <div class="two">
-              <span class="client">{{ $project->client }}</span>
+              <span class="title">{{ $project->title }}</span>
               <span class="tags">
                 @foreach ($project->tags as $tag)
                   @if ( $loop->first && $loop->last || $loop->last)
@@ -49,12 +49,12 @@
               </span>
             </div>
             <div class="three">
-              <span class="title">{{ $project->title }}</span>
+              <span class="client">{{ $project->client }}</span>
               <span class="year">{{ $project->year }}</span>
             </div>
             <div class="four">
               <div class="actions"><a class="show" href="/proyecto/{{$project->slug}}"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
-              <div class="actions"><a class="edit" href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></div>
+              <div class="actions"><a class="edit" href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></div>
               <div class="actions"><a class="delete" href="/admin/proyecto_eliminar/{{$project->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
               {{-- <div class="actions"><input type="checkbox" name="selectAll" class="select"></div> --}}
             </div>

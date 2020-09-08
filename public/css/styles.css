@@ -93,7 +93,7 @@ h4 {
 }
 .main {
   position: relative;
-  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .main-wrapper {
   margin: 60px 0;
@@ -136,26 +136,10 @@ h4 {
 .show-menu {
   display: block;
 }
-.tag-selected {
-  font-weight: 800;
-  /* color: #f8724f; */
-}
-/* .tag-selected::after {
-content: '•';
-}
-.tag-selected::before {
-content: '•';
-} */
-/* .tag-not-selected {
-color: coral;
-} */
+
+/* inicio tag filter ------------------------ */
 .tag-filter {
   padding-bottom: 50px;
-}
-@media (min-width: 470px) {
-  .tag-filter {
-    padding-bottom: 0;
-  }
 }
 .tag-filter a:hover {
   color: rgb(82, 82, 82);
@@ -167,63 +151,97 @@ color: coral;
   flex-wrap: wrap;
   line-height: 2.5
 }
-@media (min-width: 470px) {
-  .tag-filter ul {
-    justify-content: space-evenly;
-  }
-}
-
 .tag-filter li a {
   font-size: 18px;
   padding: 0 10px;
 }
+.tag-filter li a:hover {
+  color: #f8724f;
+}
+.tag-selected {
+  font-weight: 800;
+}
+/* .page-title {
+border-bottom: solid black 1px;
+} */
 @media (min-width: 470px) {
+  .tag-filter {
+    padding-bottom: 0;
+  }
+  .tag-filter ul {
+    justify-content: space-evenly;
+  }
   .tag-filter li a {
     line-height: 50px;
     padding: 0;
   }
 }
-.tag-filter li a:hover {
-  color: #f8724f;
-}
-.page-title {
-  border-bottom: solid black 1px;
-}
-/* inicio no se toca */
+/* inicio tag filter ------------------------ */
+
+/* INICIO MASONRY ----------------------------------------*/
 .project-wrapper {
   /* padding: 10px 0 10px 0; */
   padding: 50px 0;
   border-top: solid 1px black;
 }
-@media (min-width: 470px) {
-  .project-wrapper {
-    /* padding: 50px 0; */
-  }
-}
 .project-masonry {
-  /* margin: 1.5em 0; */
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5em;
+  /* padding: 0;
   -moz-column-gap: 1.5em;
   -webkit-column-gap: 1.5em;
   -ms-column-gap: 1.5em;
   column-gap: 1.5em;
-  font-size: .85em;
+  font-size: .85em; */
+}
+@media (min-width: 400px) {
+
+  .project-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    /* -ms-column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2; */
+  }
+}
+@media (min-width: 720px) {
+  .project-masonry {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    /* -ms-column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3; */
+  }
 }
 .project-card {
   display: inline-block;
-  margin: 0 0 1em;
+  /* margin: 0 0 1em; */
   width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   line-height: 0;
 }
-/* FIN DE NO SE TOCA */
+/* FIN MASONRY ----------------------------------------*/
 
+/* Inicio loading icon ---------------------------------------- */
+.loader-parent {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(223, 223, 223, 0.28);
+}
 .loader {
-  border: 10px solid #faf5ef;
+  border: 10px solid rgba(255, 189, 128, 1);
   border-radius: 50%;
-  border-top: 10px solid black;
+  border-top: 10px solid white;
   width: 60px;
   height: 60px;
   -webkit-animation: spin 2s linear infinite;
@@ -233,17 +251,16 @@ color: coral;
   left: 47%;
   display: none;
 }
-
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* fin loading icon ---------------------------------------- */
 
 .project-link {
   display: table-cell;
@@ -297,14 +314,14 @@ color: coral;
 .tag-name {
   color: #1b1b1b;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 25px;
   text-transform: none;
   font-style: italic;
   display: inline;
   font-weight: lighter;
 }
 
-/* estudio */
+/* estudio ---------------------------------------------------*/
 .studio-img {
   width: 100%;
 }
@@ -312,7 +329,7 @@ color: coral;
   margin: 50px 0;
 }
 
-/* proyecto */
+/* vista proyecto ---------------------------------------------------*/
 .project-data {
   width: 100%;
   display: block;
@@ -320,11 +337,6 @@ color: coral;
 }
 .top-left-side {
   margin-bottom: 20px;
-}
-.left-side {
-  /* width: 70%; */
-  /* padding-right: 20px; */
-  /* padding: 0 10px 40px 0px; */
 }
 .right-side {
   font-size: 0.8em;
@@ -343,16 +355,18 @@ color: coral;
 footer {
   text-align: center;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   border-top: solid 1px black;
-  padding: 60px 0;
+  padding: 60px 20px;
+  line-height: 22px;
 }
+
+/* INICIO BACK TO TOP ----------------------------------------- */
 #backTop {
   visibility: hidden;
-  /* display: none; */
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -368,6 +382,7 @@ footer {
 #backTop:hover {
   background-color: grey;
 }
+/* FIN BACK TO TOP ----------------------------------------- */
 
 @media (min-width: 470px) {
   header {
@@ -388,7 +403,8 @@ footer {
   .main {
     /* max-width: 1180px; */
     margin: 0 auto;
-    padding-top: 0;
+    padding-top: 40px;
+    padding-bottom: 0px;
     margin-bottom: 30px;
   }
   .wrapper {
@@ -404,7 +420,6 @@ footer {
     margin: 0 10px;
   }
   footer {
-    padding-top: 60px;
     text-align: center;
     font-weight: 500;
     font-size: 13px;
@@ -420,16 +435,6 @@ footer {
   .right-side {
     width: 30%;
     font-size: 0.8em;
-
-  }
-}
-
-@media (min-width: 400px) {
-  .project-masonry {
-    -ms-column-count: 2;
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
   }
 }
 
@@ -462,14 +467,8 @@ footer {
   .menu-item {
     display: inline;
   }
-  .project-masonry {
-    -ms-column-count: 3;
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
 
-  /*login_form */
+  /*inicio login form-------------------------------------- */
   .caja {
     max-width: 400px;
     margin: 0 auto;
@@ -523,4 +522,5 @@ footer {
     align-self: flex-end;
     line-height: 12px;
   }
+  /*fin login form-------------------------------------- */
 }

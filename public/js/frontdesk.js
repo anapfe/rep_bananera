@@ -33,9 +33,9 @@ window.addEventListener('load', function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  // scroll to top -end
+  // scroll to top -end-------------------------------------------
 
-  //project caption
+  // inicio project caption-------------------------------------------
   var projectCaption = document.querySelectorAll('.project-caption');
   projectCaption.forEach(function(element)
   {
@@ -52,9 +52,9 @@ window.addEventListener('load', function() {
       element.classList.remove('show-caption');
     });
   });
-  //project caption -end
+  // fin project caption -----------------------------------------------
 
-  // current page menu
+  // inicio current page menu-------------------------------------------
   try {
     var currentUrl = window.location.href;
     var menuItem = document.querySelectorAll(".menu-item");
@@ -68,29 +68,22 @@ window.addEventListener('load', function() {
     });
   } catch(error) {
   };
-  // current page menu -end
+  // fin current page menu -------------------------------------------
 
-  //current page tag
-  // try {
-  //   var currentUrl = window.location.href;
-  //   var homeUrl = window.location.hostname;
-  //   var tags = document.querySelectorAll('.tag');
-  //   if (currentUrl == 'http://' + homeUrl + ':8000/' || currentUrl == 'http://' + homeUrl + '/' ) {
-  //     // do nosing
-  //   } else {
-  //     tags.forEach(function(element) {
-  //       var tag = element.children[0];
-  //       var tagUrl = tag.href;
-  //       if (currentUrl === tagUrl) {
-  //         tag.classList.add('tag-selected');
-  //       } else {
-  //         // tag.classList.add('tag-not-selected');
-  //       };
-  //     });
-  //   };
-  // } catch (error) {
-  //
-  // };
-  //current page tag -end
+  // inicio masonry --------------------------------------------------
+  const imgs = document.querySelectorAll('.project-img');
+  imgs.forEach(function(e) {
+    imgHeight = e.naturalHeight;
+    imgWidth = e.naturalWidth;
+    projectCard = e.parentElement.parentElement;
+    if (imgWidth > imgHeight) {
+      projectCard.style.gridRow = 'span 2';
+    } else if (imgWidth < imgHeight) {
+      projectCard.style.gridRow = 'span 4';
+    } else {
+      projectCard.style.gridRow = 'span 3';
+    };
+  });
+  // fin masonry ----------------------------------------------------
 
 });

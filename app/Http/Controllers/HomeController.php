@@ -28,7 +28,7 @@ class HomeController extends Controller
   */
   public function index(Request $request)
   {
-    // dd($request->session()->ajax());
+      // dd($request->session()->ajax());
     //filtro de proyectos
     $request->session()->put('tag', $request
     ->has('tag') ? $request->get('tag') : ($request->session()
@@ -43,7 +43,7 @@ class HomeController extends Controller
     if ($tag != '') {
       $projects = $tag->projects;
     } else {
-      $projects = Project::orderBy('year', 'DESC')->get();
+      $projects = Project::orderBy('year', 'DESC')->orderBy('created_at', 'DESC')->get();
       // foreach ($projects as $project) {
       //   $project->etiquetas = "";
       //   foreach ($project->tags as $key => $tag) {

@@ -8,7 +8,9 @@
   <section id= "content">
     @include('ajax')
   </section>
-  <div class="loader">
+  <div class="loader-parent">
+    <div class="loader">
+    </div>
   </div>
 @endsection
 
