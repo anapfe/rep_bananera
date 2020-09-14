@@ -3,6 +3,16 @@
 @section('content')
 
   <div class="main">
+    <div id="modal">
+      <div class="modalMessege">
+        <p id="pregunta">¿ELIMINAR?</p>
+        <p class="h5">No se puede deshacer.</p>
+        <div class="confirmacion">
+          <div  id="confirm" class="btn">Sí, eliminar</div>
+          <div id="decline" class="btn neg">No, volver atrás</div>
+        </div>
+      </div>
+    </div>
     <div class="section-title">
       <span>Proyectos</span>
       <div class="controls">
@@ -45,7 +55,7 @@
                 @endforeach
               </span>
               <span class="description">
-                {{str_limit($project->es_description, 100, '...')}}
+                {{str_limit($project->es_description, 120, '...')}}
               </span>
             </div>
             <div class="three">
@@ -53,9 +63,9 @@
               <span class="year">{{ $project->year }}</span>
             </div>
             <div class="four">
-              <div class="actions"><a class="show" href="/proyecto/{{$project->slug}}"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
-              <div class="actions"><a class="edit" href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a></div>
-              <div class="actions"><a class="delete" href="/admin/proyecto_eliminar/{{$project->id}}"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+              <a class="actions show" href="/proyecto/{{$project->slug}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+              <a class="actions edit" href="/admin/proyecto_modificar/{{$project->id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+              <a class="actions delete" href="/admin/proyecto_eliminar/{{$project->id}}"><i class="fa fa-times" aria-hidden="true"></i></a>
               {{-- <div class="actions"><input type="checkbox" name="selectAll" class="select"></div> --}}
             </div>
           </div>

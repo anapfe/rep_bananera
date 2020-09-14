@@ -98,9 +98,9 @@ class HomeController extends Controller
   }
 
   //index administrador
-  public function indexAdmin()
+  public function admin()
   {
-    return view('indexAdmin');
+    return view('admin');
   }
 
   public function us() {

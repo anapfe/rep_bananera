@@ -508,12 +508,14 @@ footer {
   }
   .btn {
     padding: 5px 20px;
-    background-color: #FF9966;
+    background-color: coral;
     color: white;
     text-transform: uppercase;
+    margin-right: 20px;
+    cursor: pointer;
   }
   .btn:hover {
-    background-color: grey;
+    background-color: #FF9966;
   }
   .reset {
     font-size: 15px;

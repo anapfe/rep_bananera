@@ -29,7 +29,7 @@ Route::group( [ 'middleware' =>'setlocale' ], function() {
 Route::group( [ 'middleware' =>'admin' ], function() {
 
   // Admin
-  Route::get('/admin', 'HomeController@indexAdmin');
+  Route::get('/admin', 'HomeController@admin')->name('admin');
 
   Route::prefix('admin')->group(function () {
 

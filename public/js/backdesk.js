@@ -1,21 +1,18 @@
 window.addEventListener('load', function() {
 
-  // select current page
-  try {
-    var currentUrl = window.location.href;
-    var menuSubItem = document.querySelectorAll(".menu-subitem");
-    menuSubItem.forEach(function(elem) {
-      var menuItem = elem.children[0];
-      var menuUrl = menuItem.href;
-      var parent = elem.parentElement;
-      if (currentUrl === menuUrl) {
-        parent.classList.add('show');
-        menuItem.style.fontWeight = "700";
-      };
-    });
-  } catch(error) {
-  };
-  
+  // // destacar current page
+  // try {
+  //   var currentUrl = window.location.href;
+  //   var menuItem = document.querySelectorAll(".menu-item");
+  //   menuItem.forEach(function(e) {
+  //   var menuItemUrl = e.href;
+  //     if (currentUrl.includes()) {
+  //       menuItem.style.fontWeight = "700";
+  //     };
+  //   });
+  // } catch(error) {
+  // };
+
   // select all
   try {
     var all = document.querySelector('#selectAll');
@@ -119,42 +116,6 @@ window.addEventListener('load', function() {
   //   });
   // };
   //
-  // // aviso de eliminación
-  // var del = document.querySelectorAll('.delete');
-  // del.forEach(function(element) {
-  //   element.addEventListener('click', function(event) {
-  //     // var result = confirm("Estás por borrar un proyecto. No se puede deshacer");
-  //     // if (result == false) {
-  //     //   event.preventDefault();
-  //     event.preventDefault()
-  //     swal({
-  //       title: "¿Estás seguro?",
-  //       text: "Una vez eliminado no se puede recuerar",
-  //       icon: "warning",
-  //       buttons: ["Cancelar", "Confirmar"],
-  //       dangerMode: true,
-  //       timer: 10000,
-  //     })
-  //     .then((willDelete) => {
-  //       if (willDelete) {
-  //         swal("Se eliminó correctamente", {
-  //           icon: "success",
-  //         });
-  //       } else {
-  //         swal("No se eliminó");
-  //         var ajax = new XMLHttpRequest();
-  //         ajax.onreadystatechange = function() {
-  //           if (ajax.readyState == 4 && ajax.status == 200) {
-  //             console.log(xmlhttp.responseText);
-  //
-  //             ajax.open("POST", "url", true);
-  //
-  //             ajax.setRequestHeader("Contenttype", "application/xwwwformurlencoded");
-  //
-  //           }
-  //         };
-  //       };
-  //     });
   //
   //     // validacion de carga de proyecto
   //     try {
@@ -254,7 +215,30 @@ window.addEventListener('load', function() {
   //       });
   //     } catch(error) {
   //     };
-  //
   //   });
 
+  var del = document.querySelectorAll('.delete');
+  del.forEach(function(element) {
+    element.onclick = function(e) {
+      const url = element.href;
+      e.preventDefault();
+      var modal = document.querySelector('#modal');
+      modal.style.display = 'block';
+
+      var confirm = document.querySelector('#confirm');
+      var decline = document.querySelector('#decline');
+      confirm.onclick = function() {
+        window.location.href = url;
+      };
+      decline.onclick = function() {
+        modal.style.display = "none";
+      };
+      window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        };
+      });
+    };
   });
+
+});

@@ -10,7 +10,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>ADMINISTRACIÓN</title>
+  <title>República Bananera - ADMIN</title>
 
   <!-- Styles -->
   <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
