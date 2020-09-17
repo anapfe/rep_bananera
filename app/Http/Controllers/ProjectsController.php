@@ -16,7 +16,6 @@ class ProjectsController extends Controller
     $projects = Project::where('title', 'like', '%' . $request->input('search') . '%')->get();
     $param = [
       'projects' => $projects,
-
     ];
     return view('projects.list', $param);
   }

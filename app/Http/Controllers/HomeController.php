@@ -28,7 +28,6 @@ class HomeController extends Controller
   */
   public function index(Request $request)
   {
-      // dd($request->session()->ajax());
     //filtro de proyectos
     $request->session()->put('tag', $request
     ->has('tag') ? $request->get('tag') : ($request->session()
@@ -41,19 +40,14 @@ class HomeController extends Controller
 
     // si tag está vacio, traeme todos los proyectos
     if ($tag != '') {
-      $projects = $tag->projects;
+      $projects = $tag->projects()
+        ->orderBy('year', 'DESC')
+        ->orderBY('created_at', 'DESC')
+        ->get();
     } else {
-      $projects = Project::orderBy('year', 'DESC')->orderBy('created_at', 'DESC')->get();
-      // foreach ($projects as $project) {
-      //   $project->etiquetas = "";
-      //   foreach ($project->tags as $key => $tag) {
-      //     if ( $key === 0 ) {
-      //       $project->etiquetas .= $tag->es_name;
-      //     } else {
-      //       $project->etiquetas .= ", " . $tag->es_name;
-      //     }
-      //   }
-      // }
+      $projects = Project::orderBy('year', 'DESC')
+        ->orderBy('created_at', 'DESC')
+        ->get();
     }
 
     //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
