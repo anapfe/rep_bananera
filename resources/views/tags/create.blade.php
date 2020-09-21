@@ -6,9 +6,8 @@
       <span>Etiqueta - Nueva</span>
     </div>
     <div class="main-body">
-      <form class="form-project" action="/etiqueta_nueva" method="POST" enctype="multipart/form-data">
+      <form class="form-project" action="/admin/etiqueta_nueva" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
-
 
           <div class="cajitas-form">
             <div class="input-div" id="es_name">

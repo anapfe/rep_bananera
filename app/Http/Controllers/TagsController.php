@@ -97,8 +97,8 @@ class TagsController extends Controller
   public function destroyTag($id)
   {
     $tag = Tag::find($id);
-    $tag->project()->sync([]);
+    $tag->projects()->sync([]);
     $tag->delete();
-    return redirect('/tags');
+    return redirect('/admin/etiquetas');
   }
 }

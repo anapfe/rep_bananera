@@ -10,7 +10,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>REPÚBLICA BANANERA</title>
+  <title>REPÚBLICA BANANERA - estudio</title>
 
   <!-- Styles -->
   <link href="{{ asset('css/styles.css') }}" rel="stylesheet">

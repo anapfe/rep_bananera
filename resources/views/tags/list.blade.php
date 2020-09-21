@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="main">
+    @include('modal')
     <div class="section-title">
       <span>Etiquetas</span>
       <div class="controls">

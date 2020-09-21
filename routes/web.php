@@ -52,7 +52,7 @@ Route::group( [ 'middleware' =>'admin' ], function() {
     Route::post('/etiqueta_nueva', 'TagsController@storeTag');
     Route::get('/etiqueta_modificar/{name}', 'TagsController@editTag');
     Route::patch('/etiqueta_modificar/{name}', 'TagsController@updateTag');
-    Route::get('/eliminarEtiqueta/{name}', 'TagsController@destroyTag');
+    Route::get('/etiqueta_eliminar/{id}', 'TagsController@destroyTag');
 
     // rutas user
     Route::get('/editar_cuenta/{id}', 'UsersController@profileEdit');
