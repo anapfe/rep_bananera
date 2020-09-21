@@ -454,14 +454,15 @@ table td {
 }
 .actions {
   align-self: flex-start;
-}
-.show {
   color: black;
 }
-.edit {
+.show:hover {
+  color: grey;
+}
+.edit:hover {
   color: rgb(31, 156, 0);
 }
-.delete {
+.delete:hover {
   color: red;
 }
 .projectBlock .select {
