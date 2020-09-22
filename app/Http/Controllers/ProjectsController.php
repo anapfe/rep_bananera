@@ -22,7 +22,7 @@ class ProjectsController extends Controller
 
   // lista proyectos
   public function listProjects() {
-    return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->get()]);
+    return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->paginate(20)]);
   }
 
   // proyectos por año
@@ -207,9 +207,6 @@ class ProjectsController extends Controller
       $project->primary_img = $project->primary_img;
     }
 
-    // if (count($request->file('altImg')) > 0) {
-    //   $this->multiPhoto($request, $id);
-    // }
 
     if ($request->file('altImg') == !null) {
       $this->multiPhoto($request, $project);

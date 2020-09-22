@@ -176,6 +176,7 @@ a {
 }
 .main-body {
   width: 100%;
+  margin-bottom: 40px;
 }
 .success-login {
   width: 100%;
@@ -466,6 +467,17 @@ table td {
   color: red;
 }
 .projectBlock .select {
+}
+.pages {
+  display: flex;
+  justify-content: center;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination > li {
+  margin: 0 4px;
 }
 
 @media (min-width: 470px) {

@@ -63,5 +63,8 @@
         @endforeach
       @endif
     </div>
+    <div class="pages">
+    {{ $projects->links() }}
+    </div>
   </div>
 @endsection
