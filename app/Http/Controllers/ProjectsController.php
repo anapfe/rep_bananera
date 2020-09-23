@@ -22,7 +22,7 @@ class ProjectsController extends Controller
 
   // lista proyectos
   public function listProjects() {
-    return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->paginate(20)]);
+    return view('projects.list', ['projects' => Project::orderBy('created_at', 'desc')->paginate(30)]);
   }
 
   // proyectos por año
