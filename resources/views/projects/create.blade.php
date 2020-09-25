@@ -23,7 +23,7 @@
             <label class="form-label" for="year">Año</label>
             <select class="input-project" name="year">
               <option value="{{ old('year') }}">Seleccionar</option>
-              @for ($i=2005; $i <= date("Y"); $i++)
+              @for ($i=date("Y") ; $i >= 2005 ; $i--)
                 <option class="" value="{{$i}}">{{$i}}</option>
               @endfor
             </select>

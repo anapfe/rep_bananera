@@ -1,4 +1,3 @@
-{{-- <div class="main"> --}}
 {{-- filtro de proyectos por tag --}}
 <div class="tag-filter">
   <ul>
