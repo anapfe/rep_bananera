@@ -416,7 +416,7 @@ table td {
 .projectBlock .two {
   margin-right: 20px;
   line-height: normal;
-  max-width: 350px;
+  width: 350px;
 }
 .projectBlock .title {
   display: block;
