@@ -50,13 +50,19 @@ class HomeController extends Controller
         ->get();
     }
 
+    $param = [
+     'tag' => $tag,
+     'tags' => $tags,
+     'projects' => $projects
+   ];
+
     //este bloque está para que si hay una petición ajax solamente vaya a los datos sin toda la info HTML que no es parseable o no es JSONEABLE
     if ($request->ajax()) {
       //va a los datos
-      return view('ajax', compact('tag', 'tags', 'projects'));
+      return view('ajax', $param);
     } else {
       // va a la página normal
-      return view('index', compact('tag', 'tags', 'projects', 'project->etiquetas'));
+      return view('index', $param);
     }
     // return view('index', compact('tag', 'tags', 'projects'));
   }

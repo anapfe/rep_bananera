@@ -64,7 +64,7 @@ Route::group( [ 'middleware' =>'admin' ], function() {
     Route::post('/producto_nuevo', 'ProductsController@storeProduct');
     Route::get('/producto_modificar/{name}', 'ProductsController@editProduct');
     Route::patch('/producto_modificar/{name}', 'ProductsController@updateProduct');
-    Route::get('/eliminarProducto/{name}', 'ProductsController@destroyProduct');
+    Route::get('/eliminar_Producto/{name}', 'ProductsController@destroyProduct');
   });
 });
 

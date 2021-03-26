@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'No se encuentran los datos en nuestra base de datos',
-    'throttle' => 'Intentaste ingresar demasiadas veces. Volvé a intentar en :seconds segundos',
+    'failed' => 'No se encuentran los datos en nuestra base de datos.',
+    'throttle' => 'Intentaste ingresar demasiadas veces. Volvé a intentar en :seconds segundos.',
 
 ];

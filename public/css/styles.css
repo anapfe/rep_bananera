@@ -495,7 +495,8 @@ footer {
   .input-login {
     width: 100%;
     border: 1px solid grey;
-    height: 25px;
+    height: 40px;
+    padding: 10px;
   }
   .rememberme {
     color: coral;
@@ -519,10 +520,18 @@ footer {
   }
   .reset {
     font-size: 15px;
-    color: coral;
+    color: black;
     padding: 0;
     align-self: flex-end;
     line-height: 12px;
   }
+  .help-block {
+    font-size: 14px;
+    color: red;
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+
   /*fin login form-------------------------------------- */
 }
