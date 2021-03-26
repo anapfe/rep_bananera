@@ -116,6 +116,12 @@ a {
   color: coral;
   font-weight: bold;
 }
+.adminItem a:hover {
+  color: black;
+}
+.adminItem i {
+  margin-left: 5px;
+}
 .menu {
   margin-top: 60px;
   width: 100%;

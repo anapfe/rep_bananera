@@ -198,6 +198,7 @@ class ProjectsController extends Controller
     $project->cat_description = $request->input('cat_description');
     $project->year = $request->input('year');
     $project->client = $request->input('client');
+    $project->slug = Str::kebab($request->input('title') . "-" . $request->input('client') . "-" . $request->input('year'));
 
     if ($request->has('primary_img')) {
       $extension = $request->file('primary_img')->getClientOriginalExtension();
